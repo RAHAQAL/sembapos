@@ -1,0 +1,27 @@
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe.config
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmBarang.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmKaryawan.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmListBarang.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmListKaryawan.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmTransaksi.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmUser.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmUtama.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListBarang.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListPenjualan.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.LoginForm1.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Resources.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.vbproj.GenerateResource.Cache
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.pdb
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.xml
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.xml
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.vbprojResolveAssemblyReference.cache
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ReportPenjualan.resources
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\RdlCompile.cache
+c:\users\asus\onedrive\documents\visual studio 2012\Projects\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\RdlCompile.compiled
+C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\kasir app\Aplikasi Kasir\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe.config
+C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\kasir app\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
+C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\kasir app\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.xml
+C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\kasir app\Aplikasi Kasir\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
