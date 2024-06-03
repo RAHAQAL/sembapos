@@ -1,4 +1,6 @@
-﻿Imports System.Drawing.Drawing2D
+﻿Imports System.Drawing
+Imports System.Drawing.Drawing2D
+Imports System.Windows.Forms
 
 
 
@@ -129,11 +131,9 @@ Public Class LoginForm1
 
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         opendb()
-        txtuser.Focus()
-
     End Sub
 
-    Private Sub txtuser_TextChanged(sender As Object, e As EventArgs) Handles txtuser.TextChanged
+    Private Sub txtuser_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -157,15 +157,13 @@ Public Class LoginForm1
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
+    
 
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtPassword_TextChanged_1(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+    Private Sub txtPassword_TextChanged_1(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -175,5 +173,67 @@ Public Class LoginForm1
         Else
             txtPassword.UseSystemPasswordChar = False
         End If
+    End Sub
+
+
+
+
+
+
+
+    Private Sub txtuser_GotFocus(sender As Object, e As EventArgs) Handles txtuser.GotFocus
+        Label5.Visible = False
+    End Sub
+
+    Private Sub txtuser_LostFocus(sender As Object, e As EventArgs) Handles txtuser.LostFocus
+        If txtuser.Text = "" Then
+            Label5.Visible = True
+        End If
+    End Sub
+
+
+    Private Sub txtPassword_GotFocus(sender As Object, e As EventArgs) Handles txtPassword.GotFocus
+        Label4.Visible = False
+    End Sub
+
+    Private Sub txtPassword_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
+        If txtPassword.Text = "" Then
+            Label4.Visible = True
+        End If
+    End Sub
+
+
+
+    Private Sub OK_Paint(sender As Object, e As PaintEventArgs) Handles OK.Paint
+        Dim buttonPath As GraphicsPath = New GraphicsPath()
+        Dim cornerRadius As Integer = 25 ' Radius for the corners
+
+        buttonPath.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90)
+        buttonPath.AddArc(OK.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90)
+        buttonPath.AddArc(OK.Width - cornerRadius, OK.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90)
+        buttonPath.AddArc(0, OK.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90)
+        buttonPath.CloseFigure()
+
+        OK.Region = New Region(buttonPath)
+    End Sub
+
+    
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+        Dim panelPath As GraphicsPath = New GraphicsPath()
+        Dim cornerRadius As Integer = 25 ' Ukuran radius sudut
+
+        panelPath.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90)
+        panelPath.AddArc(Panel1.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90)
+        panelPath.AddArc(Panel1.Width - cornerRadius, Panel1.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90)
+        panelPath.AddArc(0, Panel1.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90)
+        panelPath.CloseFigure()
+
+        Panel1.Region = New Region(panelPath)
+    End Sub
+
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
     End Sub
 End Class

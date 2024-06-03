@@ -102,8 +102,7 @@ Public Class FrmUtama
     End Sub
 
     Private Sub BarangToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles BarangToolStripMenuItem1.Click
-        ListBarang.MdiParent = Me
-        ListBarang.Show()
+        
     End Sub
 
     Private Sub PENJUALANToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PENJUALANToolStripMenuItem1.Click

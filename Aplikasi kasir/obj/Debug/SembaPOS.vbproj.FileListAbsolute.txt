@@ -44,3 +44,4 @@ C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\sembapos\sembapos\Aplikasi Kasir\o
 C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\sembapos\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe
 C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\sembapos\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.pdb
 C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\sembapos\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.xml
+C:\Users\ASUS\OneDrive\Desktop\FAHRI MUHAMMAD\sembapos\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Dashboard.resources

@@ -43,7 +43,7 @@ Partial Class FrmUtama
         'LOGOUTToolStripMenuItem
         '
         Me.LOGOUTToolStripMenuItem.Name = "LOGOUTToolStripMenuItem"
-        Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(134, 24)
+        Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
         Me.LOGOUTToolStripMenuItem.Text = "LOGOUT"
         '
         'FILEToolStripMenuItem
@@ -56,7 +56,7 @@ Partial Class FrmUtama
         'LOGINToolStripMenuItem
         '
         Me.LOGINToolStripMenuItem.Name = "LOGINToolStripMenuItem"
-        Me.LOGINToolStripMenuItem.Size = New System.Drawing.Size(134, 24)
+        Me.LOGINToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
         Me.LOGINToolStripMenuItem.Text = "LOGIN"
         '
         'MANAGEUSERToolStripMenuItem
@@ -135,7 +135,7 @@ Partial Class FrmUtama
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(790, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1924, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -144,7 +144,7 @@ Partial Class FrmUtama
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(790, 506)
+        Me.ClientSize = New System.Drawing.Size(1924, 1055)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.Name = "FrmUtama"

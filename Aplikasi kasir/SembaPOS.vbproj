@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FDetailJual.Designer.vb">
       <DependentUpon>FDetailJual.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="POS.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDetailJual.resx">
       <DependentUpon>FDetailJual.vb</DependentUpon>
     </EmbeddedResource>
