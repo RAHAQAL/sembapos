@@ -21,11 +21,12 @@ Module POS
     Public pilih As Boolean
     Public selectedIdJual As String
     Public _IdJual As String
+    Public loggedInUserName As String
 
 
 
     Public Sub opendb()
-        sql = "Data Source=DESKTOP-E16A8VK; Initial Catalog=SembaPOS;Integrated Security =True;"
+        sql = "Data Source=LAPTOP-SPGTEK6N; Initial Catalog=SembaPOS;Integrated Security =True;"
         koneksi = New SqlConnection(sql)
 
         Try

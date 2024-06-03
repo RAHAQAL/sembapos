@@ -87,8 +87,10 @@ Public Class FrmUtama
 
 
     Private Sub PenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenjualanToolStripMenuItem.Click
-        FPenjualan.MdiParent = Me
-        FPenjualan.Show()
+        FSales.MdiParent = Me
+        FSales.Show()
+        'FPenjualan.MdiParent = Me
+        'FPenjualan.Show()
     End Sub
 
 

@@ -55,13 +55,13 @@ select*from Tuser
 delete from Tuser
 
 CREATE TABLE TJual(
-    id_jual VARCHAR(13) PRIMARY KEY NOT NULL,
+    id_jual VARCHAR(15) PRIMARY KEY NOT NULL,
     tanggal VARCHAR(10) NOT NULL,
-    total_harga INT ,
-	keterangan VARCHAR(10) NOT NULL
+    total_bayar INT ,
+	kasir VARCHAR(30) NOT NULL
 );
 
-INSERT INTO TJual VALUES('354TJKL','05/05/2024','','Tunai')
+INSERT INTO TJual VALUES('354TJKL','05/05/2024','','Fahri')
 INSERT INTO TJual VALUES('987TJKL','06/05/2024','','Tunai')
 INSERT INTO TJual VALUES('657TJKL','07/05/2024','','Tunai')
 
@@ -70,16 +70,16 @@ select*from TJual
 delete from TJual
 
 CREATE TABLE TDetailJual (
-    id_jual VARCHAR(13) NOT NULL,
+    id_jual VARCHAR(15) NOT NULL,
     id_barang VARCHAR(5) NOT NULL ,
-    jumlah INT NOT NULL,
     harga_jual INT NOT NULL,
-	satuan VARCHAR(10) NOT NULL,
+    jumlah INT NOT NULL,
+	total_harga INT
 	CONSTRAINT id_jual FOREIGN KEY (id_jual) REFERENCES TJual (id_jual),
 	CONSTRAINT id_barang FOREIGN KEY (id_barang) REFERENCES TBarang (id_barang)
 );
 
-INSERT INTO TDetailJual VALUES('354TJKL','B-001',1,10000,'Kg')
+INSERT INTO TDetailJual VALUES('354TJKL','B-001',4,10000,40000)
 INSERT INTO TDetailJual VALUES('354TJKL','B-002',2,15000,'Pcs')
 INSERT INTO TDetailJual VALUES('354TJKL','B-003',3,20000,'Unit')
 

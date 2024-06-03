@@ -45,13 +45,14 @@ Partial Class LoginForm1
         '
         'OK
         '
-        Me.OK.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.OK.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(239, Byte), Integer))
         Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.OK.Font = New System.Drawing.Font("Obadiah pro", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OK.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OK.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.OK.Location = New System.Drawing.Point(231, 524)
+        Me.OK.Location = New System.Drawing.Point(173, 426)
+        Me.OK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(194, 46)
+        Me.OK.Size = New System.Drawing.Size(146, 37)
         Me.OK.TabIndex = 11
         Me.OK.Text = "Masuk"
         Me.OK.UseMnemonic = False
@@ -60,22 +61,24 @@ Partial Class LoginForm1
         'PasswordLabel
         '
         Me.PasswordLabel.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.PasswordLabel.Font = New System.Drawing.Font("Obadiah pro", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasswordLabel.ForeColor = System.Drawing.Color.Black
-        Me.PasswordLabel.Location = New System.Drawing.Point(148, 395)
+        Me.PasswordLabel.Location = New System.Drawing.Point(111, 321)
+        Me.PasswordLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.PasswordLabel.Name = "PasswordLabel"
-        Me.PasswordLabel.Size = New System.Drawing.Size(257, 27)
+        Me.PasswordLabel.Size = New System.Drawing.Size(193, 22)
         Me.PasswordLabel.TabIndex = 9
         Me.PasswordLabel.Text = "Password"
         Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'UsernameLabel
         '
-        Me.UsernameLabel.Font = New System.Drawing.Font("Obadiah pro", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameLabel.ForeColor = System.Drawing.Color.Black
-        Me.UsernameLabel.Location = New System.Drawing.Point(148, 292)
+        Me.UsernameLabel.Location = New System.Drawing.Point(111, 237)
+        Me.UsernameLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(257, 27)
+        Me.UsernameLabel.Size = New System.Drawing.Size(193, 22)
         Me.UsernameLabel.TabIndex = 6
         Me.UsernameLabel.Text = "Username"
         Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -86,16 +89,17 @@ Partial Class LoginForm1
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.OK)
         Me.Panel1.Controls.Add(Me.PasswordLabel)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.UsernameLabel)
-        Me.Panel1.Location = New System.Drawing.Point(684, 187)
+        Me.Panel1.Location = New System.Drawing.Point(439, 100)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(651, 691)
+        Me.Panel1.Size = New System.Drawing.Size(489, 562)
         Me.Panel1.TabIndex = 14
         '
         'Panel4
@@ -104,9 +108,10 @@ Partial Class LoginForm1
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.txtPassword)
-        Me.Panel4.Location = New System.Drawing.Point(151, 425)
+        Me.Panel4.Location = New System.Drawing.Point(113, 345)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(349, 45)
+        Me.Panel4.Size = New System.Drawing.Size(262, 37)
         Me.Panel4.TabIndex = 22
         '
         'Label4
@@ -114,24 +119,26 @@ Partial Class LoginForm1
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Enabled = False
-        Me.Label4.Font = New System.Drawing.Font("Obadiah pro", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label4.Location = New System.Drawing.Point(12, 13)
+        Me.Label4.Location = New System.Drawing.Point(9, 11)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(144, 17)
+        Me.Label4.Size = New System.Drawing.Size(120, 15)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Masukkan password"
         '
         'txtPassword
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Obadiah pro", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.Black
-        Me.txtPassword.Location = New System.Drawing.Point(15, 10)
+        Me.txtPassword.Location = New System.Drawing.Point(11, 8)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(311, 22)
+        Me.txtPassword.Size = New System.Drawing.Size(233, 18)
         Me.txtPassword.TabIndex = 19
         '
         'Panel2
@@ -140,9 +147,10 @@ Partial Class LoginForm1
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.txtuser)
-        Me.Panel2.Location = New System.Drawing.Point(151, 322)
+        Me.Panel2.Location = New System.Drawing.Point(113, 262)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(349, 45)
+        Me.Panel2.Size = New System.Drawing.Size(262, 37)
         Me.Panel2.TabIndex = 20
         '
         'Label5
@@ -150,23 +158,25 @@ Partial Class LoginForm1
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Enabled = False
-        Me.Label5.Font = New System.Drawing.Font("Obadiah pro", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label5.Location = New System.Drawing.Point(12, 13)
+        Me.Label5.Location = New System.Drawing.Point(9, 11)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(144, 17)
+        Me.Label5.Size = New System.Drawing.Size(123, 15)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Masukkan username"
         '
         'txtuser
         '
         Me.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtuser.Font = New System.Drawing.Font("Obadiah pro", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtuser.ForeColor = System.Drawing.Color.Black
-        Me.txtuser.Location = New System.Drawing.Point(15, 10)
+        Me.txtuser.Location = New System.Drawing.Point(11, 8)
+        Me.txtuser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtuser.Multiline = True
         Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(311, 22)
+        Me.txtuser.Size = New System.Drawing.Size(233, 18)
         Me.txtuser.TabIndex = 19
         '
         'CheckBox1
@@ -174,9 +184,10 @@ Partial Class LoginForm1
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Poppins Light", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckBox1.Location = New System.Drawing.Point(354, 474)
+        Me.CheckBox1.Location = New System.Drawing.Point(266, 385)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(140, 29)
+        Me.CheckBox1.Size = New System.Drawing.Size(112, 23)
         Me.CheckBox1.TabIndex = 16
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -184,42 +195,49 @@ Partial Class LoginForm1
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(293, 85)
+        Me.PictureBox1.Location = New System.Drawing.Point(220, 69)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(104, 98)
+        Me.PictureBox1.Size = New System.Drawing.Size(78, 80)
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(239, 214)
+        Me.Label2.Location = New System.Drawing.Point(187, 176)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(167, 36)
+        Me.Label2.Size = New System.Drawing.Size(123, 21)
         Me.Label2.TabIndex = 13
-        Me.Label2.Text = "Toko Sembako"
+        Me.Label2.Text = "Toko SembaPas"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(244, 186)
+        Me.Label1.Location = New System.Drawing.Point(167, 151)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(157, 36)
+        Me.Label1.Size = New System.Drawing.Size(161, 21)
         Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Aplikasi Kasir"
+        Me.Label1.Text = "Aplikasi Point of Sale"
         '
         'LoginForm1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(1530, 978)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1028, 609)
         Me.Controls.Add(Me.Panel1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
         Me.Name = "LoginForm1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginForm1"

@@ -50,7 +50,8 @@ Public Class FrmListBarang
         If ListView1.SelectedItems.Count > 0 Then
             Dim selectedItem As ListViewItem = ListView1.SelectedItems(0)
 
-            FDetailJual.txtBarang.Text = selectedItem.Text & " - " & selectedItem.SubItems(1).Text
+            FSales.txtBarang.Text = selectedItem.Text & " - " & selectedItem.SubItems(1).Text
+
             Me.Close()
         End If
     End Sub

@@ -57,6 +57,8 @@ Public Class LoginForm1
                         Exit Sub
                     ElseIf mroleid = "1" Then
                         'Jika benar program akan menampilkan pada form utama
+                        loggedInUserName = mnama
+
                         txtuser.Text = ""
                         txtPassword.Text = ""
 
@@ -74,6 +76,8 @@ Public Class LoginForm1
                         Me.Hide()
 
                     Else
+                        loggedInUserName = mnama
+
                         txtuser.Text = ""
                         txtPassword.Text = ""
 
@@ -206,7 +210,7 @@ Public Class LoginForm1
 
     Private Sub OK_Paint(sender As Object, e As PaintEventArgs) Handles OK.Paint
         Dim buttonPath As GraphicsPath = New GraphicsPath()
-        Dim cornerRadius As Integer = 25 ' Radius for the corners
+        Dim cornerRadius As Integer = 20 ' Radius for the corners
 
         buttonPath.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90)
         buttonPath.AddArc(OK.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90)
