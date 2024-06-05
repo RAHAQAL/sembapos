@@ -50,8 +50,8 @@ Partial Class FrmBarang
         Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(389, 414)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ListView1.Location = New System.Drawing.Point(298, 348)
+        Me.ListView1.Margin = New System.Windows.Forms.Padding(2)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(702, 262)
         Me.ListView1.TabIndex = 33
@@ -91,8 +91,8 @@ Partial Class FrmBarang
         Me.btnSimpan.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer))
         Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSimpan.ForeColor = System.Drawing.Color.White
-        Me.btnSimpan.Location = New System.Drawing.Point(884, 325)
-        Me.btnSimpan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSimpan.Location = New System.Drawing.Point(793, 259)
+        Me.btnSimpan.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(98, 37)
         Me.btnSimpan.TabIndex = 32
@@ -104,8 +104,8 @@ Partial Class FrmBarang
         Me.btnHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.btnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHapus.ForeColor = System.Drawing.Color.White
-        Me.btnHapus.Location = New System.Drawing.Point(884, 266)
-        Me.btnHapus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnHapus.Location = New System.Drawing.Point(793, 200)
+        Me.btnHapus.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(98, 37)
         Me.btnHapus.TabIndex = 31
@@ -117,8 +117,8 @@ Partial Class FrmBarang
         Me.btnUbah.BackColor = System.Drawing.Color.LightSlateGray
         Me.btnUbah.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUbah.ForeColor = System.Drawing.Color.White
-        Me.btnUbah.Location = New System.Drawing.Point(884, 209)
-        Me.btnUbah.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUbah.Location = New System.Drawing.Point(793, 143)
+        Me.btnUbah.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUbah.Name = "btnUbah"
         Me.btnUbah.Size = New System.Drawing.Size(98, 37)
         Me.btnUbah.TabIndex = 30
@@ -128,8 +128,8 @@ Partial Class FrmBarang
         'txtStok
         '
         Me.txtStok.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStok.Location = New System.Drawing.Point(662, 330)
-        Me.txtStok.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtStok.Location = New System.Drawing.Point(571, 264)
+        Me.txtStok.Margin = New System.Windows.Forms.Padding(2)
         Me.txtStok.Name = "txtStok"
         Me.txtStok.Size = New System.Drawing.Size(145, 28)
         Me.txtStok.TabIndex = 29
@@ -137,8 +137,8 @@ Partial Class FrmBarang
         'txtSatuan
         '
         Me.txtSatuan.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSatuan.Location = New System.Drawing.Point(662, 286)
-        Me.txtSatuan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSatuan.Location = New System.Drawing.Point(571, 220)
+        Me.txtSatuan.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSatuan.Name = "txtSatuan"
         Me.txtSatuan.Size = New System.Drawing.Size(145, 28)
         Me.txtSatuan.TabIndex = 28
@@ -146,8 +146,8 @@ Partial Class FrmBarang
         'txtHJual
         '
         Me.txtHJual.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHJual.Location = New System.Drawing.Point(662, 240)
-        Me.txtHJual.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtHJual.Location = New System.Drawing.Point(571, 174)
+        Me.txtHJual.Margin = New System.Windows.Forms.Padding(2)
         Me.txtHJual.Name = "txtHJual"
         Me.txtHJual.Size = New System.Drawing.Size(145, 28)
         Me.txtHJual.TabIndex = 27
@@ -155,8 +155,8 @@ Partial Class FrmBarang
         'txtNama
         '
         Me.txtNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNama.Location = New System.Drawing.Point(662, 197)
-        Me.txtNama.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNama.Location = New System.Drawing.Point(571, 131)
+        Me.txtNama.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNama.Name = "txtNama"
         Me.txtNama.Size = New System.Drawing.Size(145, 28)
         Me.txtNama.TabIndex = 25
@@ -166,7 +166,7 @@ Partial Class FrmBarang
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(498, 336)
+        Me.Label6.Location = New System.Drawing.Point(407, 270)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(46, 24)
@@ -178,7 +178,7 @@ Partial Class FrmBarang
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(498, 285)
+        Me.Label5.Location = New System.Drawing.Point(407, 219)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 24)
@@ -190,7 +190,7 @@ Partial Class FrmBarang
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(496, 240)
+        Me.Label4.Location = New System.Drawing.Point(405, 174)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(61, 24)
@@ -202,7 +202,7 @@ Partial Class FrmBarang
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(496, 198)
+        Me.Label2.Location = New System.Drawing.Point(405, 132)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 24)
@@ -214,8 +214,8 @@ Partial Class FrmBarang
         Me.btnTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTambah.ForeColor = System.Drawing.Color.White
-        Me.btnTambah.Location = New System.Drawing.Point(884, 155)
-        Me.btnTambah.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTambah.Location = New System.Drawing.Point(793, 89)
+        Me.btnTambah.Margin = New System.Windows.Forms.Padding(2)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(98, 37)
         Me.btnTambah.TabIndex = 19
@@ -226,8 +226,8 @@ Partial Class FrmBarang
         '
         Me.txtKode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtKode.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKode.Location = New System.Drawing.Point(662, 156)
-        Me.txtKode.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtKode.Location = New System.Drawing.Point(571, 90)
+        Me.txtKode.Margin = New System.Windows.Forms.Padding(2)
         Me.txtKode.Name = "txtKode"
         Me.txtKode.Size = New System.Drawing.Size(145, 28)
         Me.txtKode.TabIndex = 18
@@ -237,7 +237,7 @@ Partial Class FrmBarang
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(496, 158)
+        Me.Label1.Location = New System.Drawing.Point(405, 92)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(120, 24)
@@ -266,7 +266,7 @@ Partial Class FrmBarang
         Me.Controls.Add(Me.txtKode)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmBarang"

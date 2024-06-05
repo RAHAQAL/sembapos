@@ -1,7 +1,10 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports System.Drawing.Printing
 
 Public Class FSales
+
+
 
 #Region "SUB"
     Sub nomorfakturotomatis()
@@ -49,9 +52,28 @@ Public Class FSales
         ' Tampilkan total bayar di label atau kontrol lainnya yang sesuai
         ' Misalnya, LabelTotalBayar.Text = totalBayar.ToString("C2")
         Label7.Text = totalBayar.ToString("C2")
+
+        ' Panggil HitungKembalian setiap kali total bayar berubah
+        HitungKembalian()
     End Sub
 
+    Sub HitungKembalian()
+        Dim totalBayar As Double
+        Dim tunai As Double
+        Dim kembalian As Double
+
+        ' Konversi total bayar dari string ke double
+        If Double.TryParse(Label7.Text, Globalization.NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("id-ID"), totalBayar) AndAlso Double.TryParse(txtTunai.Text, tunai) Then
+            kembalian = tunai - totalBayar
+            txtKembalian.Text = kembalian.ToString("C2", Globalization.CultureInfo.GetCultureInfo("id-ID"))
+        Else
+            txtKembalian.Text = "Rp0,00"
+        End If
+    End Sub
+
+
 #End Region
+
 
     Private Sub FSales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -211,6 +233,9 @@ Public Class FSales
             dtpTanggal.Value = DateTime.Now
             nudQty.Value = 0
             Label7.Text = "Rp0,00"
+            txtTunai.Clear()
+            txtKembalian.Clear()
+            txtNote.Clear()
             ListView1.Items.Clear()
         End If
     End Sub
@@ -218,6 +243,13 @@ Public Class FSales
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         If ListView1.Items.Count = 0 Then
             MsgBox("Masukkan barang terlebih dahulu!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Informasi")
+            Exit Sub
+        End If
+
+        ' Menampilkan konfirmasi sebelum menyimpan
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin menyimpan transaksi ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.No Then
             Exit Sub
         End If
 
@@ -229,7 +261,7 @@ Public Class FSales
             trans = koneksi.BeginTransaction()
 
             ' Insert into TJual
-            Dim cmdJual As New SqlCommand("INSERT INTO TJual (id_jual, tanggal, total_bayar, kasir) VALUES (@id_jual, @tanggal, @total_bayar, @kasir)", koneksi, trans)
+            Dim cmdJual As New SqlCommand("INSERT INTO TJual (id_jual, tanggal, total_bayar, kasir,tunai,kembalian,note) VALUES (@id_jual, @tanggal, @total_bayar, @kasir,@tunai,@kembalian,@note)", koneksi, trans)
             cmdJual.Parameters.AddWithValue("@id_jual", Label6.Text)
             cmdJual.Parameters.AddWithValue("@tanggal", dtpTanggal.Value.ToString("yyyy/MM/dd"))
 
@@ -242,6 +274,16 @@ Public Class FSales
             End If
 
             cmdJual.Parameters.AddWithValue("@kasir", txtKasir.Text)
+            cmdJual.Parameters.AddWithValue("@tunai", txtTunai.Text)
+
+            Dim kembalian As Double
+            If Double.TryParse(txtKembalian.Text, Globalization.NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("id-ID"), kembalian) Then
+                cmdJual.Parameters.AddWithValue("@kembalian", kembalian)
+            Else
+                Throw New Exception("Format total bayar tidak valid.")
+            End If
+
+            cmdJual.Parameters.AddWithValue("@note", txtNote.Text)
             cmdJual.ExecuteNonQuery()
 
             ' Insert into TDetailJual
@@ -282,11 +324,18 @@ Public Class FSales
             ' Tampilkan pesan informasi
             MsgBox("Transaksi berhasil disimpan!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Informasi")
 
+            PrintPreviewDialog1.Document = PrintDocument2
+            PrintPreviewDialog1.ShowDialog()
+
+
             ' Reset form setelah berhasil menyimpan
             txtBarang.Clear()
             dtpTanggal.Value = DateTime.Now
             nudQty.Value = 0
             Label7.Text = "Rp0,00"
+            txtTunai.Clear()
+            txtKembalian.Clear()
+            txtNote.Clear()
             ListView1.Items.Clear()
             nomorfakturotomatis()
 
@@ -299,5 +348,102 @@ Public Class FSales
             koneksi.Close()
         End Try
     End Sub
+
+
+
+   
+
+    Private Sub txtTunai_TextChanged(sender As Object, e As EventArgs) Handles txtTunai.TextChanged
+        HitungKembalian()
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Private Sub PrintDocument2_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument2.PrintPage
+
+        Dim paperWidth As Integer = 200 ' Lebar kertas dalam satuan piksel
+        Dim paperHeight As Integer = 250 ' Tinggi kertas dalam satuan piksel
+        e.PageSettings.PaperSize = New PaperSize("Custom", paperWidth, paperHeight)
+
+        Dim fontRegular As New Font("Arial", 10)
+        Dim fontBold As New Font("Arial", 10, FontStyle.Bold)
+        Dim fontTitle As New Font("Arial", 14, FontStyle.Bold)
+        Dim brush As New SolidBrush(Color.Black)
+
+        Dim yPos As Integer = 20
+        Dim leftMargin As Integer = e.MarginBounds.Left
+        Dim rightMargin As Integer = e.MarginBounds.Right
+
+        e.Graphics.DrawString("Toko SembaPAS", fontTitle, brush, leftMargin, yPos)
+        yPos += 30
+        e.Graphics.DrawString("Jln. Rancapetir No. 6 Ciamis", fontRegular, brush, leftMargin, yPos)
+        yPos += 20
+        e.Graphics.DrawString("Nomor Faktur: " & Label6.Text, fontRegular, brush, leftMargin, yPos)
+        yPos += 20
+        e.Graphics.DrawString("Tanggal: " & dtpTanggal.Value.ToString("yyyy/MM/dd"), fontRegular, brush, leftMargin, yPos)
+        yPos += 20
+        e.Graphics.DrawString("Kasir: " & txtKasir.Text, fontRegular, brush, leftMargin, yPos)
+        yPos += 30
+
+        ' Kolom ListView
+        e.Graphics.DrawString("ID Barang", fontBold, brush, leftMargin, yPos)
+        e.Graphics.DrawString("Nama Barang", fontBold, brush, leftMargin + 100, yPos)
+        e.Graphics.DrawString("Harga", fontBold, brush, leftMargin + 300, yPos)
+        e.Graphics.DrawString("Qty", fontBold, brush, leftMargin + 400, yPos)
+        e.Graphics.DrawString("Total", fontBold, brush, leftMargin + 450, yPos)
+        yPos += 20
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
+        yPos += 10
+
+        For Each item As ListViewItem In ListView1.Items
+            e.Graphics.DrawString(item.SubItems(0).Text, fontRegular, brush, leftMargin, yPos)
+            e.Graphics.DrawString(item.SubItems(1).Text, fontRegular, brush, leftMargin + 100, yPos)
+            e.Graphics.DrawString(item.SubItems(2).Text, fontRegular, brush, leftMargin + 300, yPos)
+            e.Graphics.DrawString(item.SubItems(3).Text, fontRegular, brush, leftMargin + 400, yPos)
+            e.Graphics.DrawString(item.SubItems(4).Text, fontRegular, brush, leftMargin + 450, yPos)
+            yPos += 20
+        Next
+
+        yPos += 20
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
+        yPos += 10
+        e.Graphics.DrawString("Total Bayar: " & Label7.Text, fontBold, brush, leftMargin, yPos)
+        yPos += 20
+
+        Dim tunaiFormatted As String = Double.Parse(txtTunai.Text).ToString("C", New Globalization.CultureInfo("id-ID"))
+        e.Graphics.DrawString("Tunai: " & tunaiFormatted, fontRegular, brush, leftMargin, yPos)
+        yPos += 20
+
+        e.Graphics.DrawString("Kembalian: " & txtKembalian.Text, fontRegular, brush, leftMargin, yPos)
+        yPos += 30
+        e.Graphics.DrawString("Terima kasih telah berbelanja!", fontRegular, brush, leftMargin, yPos)
+    End Sub
+
+
 
 End Class

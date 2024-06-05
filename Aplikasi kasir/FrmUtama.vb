@@ -3,6 +3,8 @@ Imports System.Data.SqlClient
 
 Public Class FrmUtama
 
+
+
 #Region "SUB"
     Sub UpdateMenuBasedOnRole()
         If mroleid = "1" Then
@@ -63,10 +65,10 @@ Public Class FrmUtama
         UpdateMenuBasedOnRole()
     End Sub
 
-    Private Sub LOGINToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGINToolStripMenuItem.Click
-        LoginForm1.MdiParent = Me
-        LoginForm1.Show()
-    End Sub
+    'Private Sub LOGINToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGINToolStripMenuItem.Click
+    '    LoginForm1.MdiParent = Me
+    '    LoginForm1.Show()
+    'End Sub
 
     'Private Sub CloseButton_Click(sender As Object, e As EventArgs)
     '    Dim closeButton As Button = DirectCast(sender, Button)
@@ -95,7 +97,13 @@ Public Class FrmUtama
 
 
     Private Sub LOGOUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGOUTToolStripMenuItem.Click
-        Me.Close()
+        ' Tampilkan kotak dialog konfirmasi
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Jika pengguna memilih Yes, maka tutup form
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub MANAGEUSERToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MANAGEUSERToolStripMenuItem.Click
@@ -104,11 +112,13 @@ Public Class FrmUtama
     End Sub
 
     Private Sub BarangToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles BarangToolStripMenuItem1.Click
-        
+        ListBarang.MdiParent = Me
+        ListBarang.Show()
     End Sub
 
     Private Sub PENJUALANToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PENJUALANToolStripMenuItem1.Click
-     
+        ListPenjualan.MdiParent = Me
+        ListPenjualan.Show()
     End Sub
 
 
@@ -119,7 +129,8 @@ Public Class FrmUtama
     End Sub
 
     Private Sub KARYAWANToolStripMenuItem1_Click_1(sender As Object, e As EventArgs) Handles KARYAWANToolStripMenuItem1.Click
-      
+        ListKaryawan.MdiParent = Me
+        ListKaryawan.Show()
     End Sub
 End Class
 

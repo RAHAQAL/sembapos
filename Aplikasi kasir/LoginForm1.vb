@@ -137,40 +137,6 @@ Public Class LoginForm1
         opendb()
     End Sub
 
-    Private Sub txtuser_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub LogoPictureBox_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub UsernameLabel_Click(sender As Object, e As EventArgs) Handles UsernameLabel.Click
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    
-
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtPassword_TextChanged_1(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then
             txtPassword.UseSystemPasswordChar = True
@@ -237,7 +203,4 @@ Public Class LoginForm1
     End Sub
 
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
 End Class

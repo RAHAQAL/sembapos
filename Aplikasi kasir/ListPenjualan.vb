@@ -3,10 +3,10 @@ Imports System.Data.SqlClient
 
 Public Class ListPenjualan
 
-    Private Sub FrmListPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ListPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         opendb()
         cmd.Connection = koneksi
-        cmd.CommandText = "SELECT * FROM Ttransaksi"
+        cmd.CommandText = "SELECT * FROM TJual"
         Dim rdr As SqlDataReader = cmd.ExecuteReader
         ListView1.Items.Clear()
         Do While rdr.Read
@@ -28,7 +28,7 @@ Public Class ListPenjualan
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         cmd.Connection = koneksi
-        cmd.CommandText = "SELECT * FROM Ttransaksi where id_transaksi like '" & TextBox1.Text & "%'"
+        cmd.CommandText = "SELECT * FROM TJual where id_jual like '" & TextBox1.Text & "%'"
         rdr = cmd.ExecuteReader
         ListView1.Items.Clear()
         Do While rdr.Read
@@ -46,5 +46,9 @@ Public Class ListPenjualan
 
         cmd.Dispose()
         rdr.Close()
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
     End Sub
 End Class

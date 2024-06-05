@@ -71,6 +71,25 @@ Public Class FrmKaryawan
 
     End Sub
 
+    Sub nikotomatis()
+        cmd = New SqlCommand("SELECT TOP 1 nik FROM TKaryawan ORDER BY nik DESC", koneksi)
+        rdr = cmd.ExecuteReader
+        If rdr.HasRows Then
+            rdr.Read()
+            Dim lastId As Integer = 0
+            If Integer.TryParse(rdr("nik").ToString(), lastId) Then
+                lastId += 1
+            End If
+            txtNik.Text = lastId.ToString()
+        Else
+            ' Jika tidak ada data, inisialisasi dengan nilai awal
+            txtNik.Text = "11111"
+        End If
+        rdr.Close()
+        cmd.Dispose()
+    End Sub
+
+
 #End Region
 
     Private Sub FrmKaryawan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -93,8 +112,9 @@ Public Class FrmKaryawan
 
             aktif()
             clear()
-            txtNik.Focus()
-
+            txtNik.Enabled = False
+            txtNama.Focus()
+            nikotomatis()
             ListView1.Enabled = False
 
         Else
@@ -106,6 +126,7 @@ Public Class FrmKaryawan
 
             FrmKaryawan_Load(Nothing, Nothing)
             clear()
+            txtNik.Enabled = True
             txtNik.Focus()
 
             ListView1.Enabled = True

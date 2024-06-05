@@ -57,13 +57,16 @@ delete from Tuser
 CREATE TABLE TJual(
     id_jual VARCHAR(15) PRIMARY KEY NOT NULL,
     tanggal VARCHAR(10) NOT NULL,
-    total_bayar INT ,
-	kasir VARCHAR(30) NOT NULL
+    total_bayar INT NOT NULL,
+	kasir VARCHAR(30) NOT NULL,
+	tunai int NOT NULL,
+	kembalian int NOT NULL,
+	note TEXT
 );
 
-INSERT INTO TJual VALUES('354TJKL','05/05/2024','','Fahri')
-INSERT INTO TJual VALUES('987TJKL','06/05/2024','','Tunai')
-INSERT INTO TJual VALUES('657TJKL','07/05/2024','','Tunai')
+INSERT INTO TJual VALUES('354TJKL','05/05/2024','','Fahri','','','')
+INSERT INTO TJual VALUES('987TJKL','06/05/2024','','Tunai','','','')
+INSERT INTO TJual VALUES('657TJKL','07/05/2024','','Tunai','','','')
 
 drop table TJual
 select*from TJual
@@ -81,8 +84,19 @@ CREATE TABLE TDetailJual (
 
 INSERT INTO TDetailJual VALUES('354TJKL','B-001',4,10000,40000)
 INSERT INTO TDetailJual VALUES('354TJKL','B-002',2,15000,'Pcs')
-INSERT INTO TDetailJual VALUES('354TJKL','B-003',3,20000,'Unit')
+INSERT INTO TDetailJual VALUES('SP202406050001','B-001',12000,2,24000)
 
 drop table TDetailJual
 select*from TDetailJual
 delete from TDetailJual
+
+CREATE TRIGGER KurangStokBarang
+on TDetailJual
+for insert
+as
+update TBarang set TBarang.stok  = TBarang.stok - TDetailJual.jumlah
+from TBarang join inserted TDetailJual on TBarang.id_barang=TDetailJual.id_barang
+--update TBarang set TBarang.hargajual  = TDetailJual.harga_jual
+--from TBarang join inserted TDetailJual on TBarang.id_barang=TDetailJual.id_barang
+
+drop trigger KurangStokBarang

@@ -2,13 +2,12 @@
 Imports System.Data.SqlClient
 Imports System.Drawing.Printing
 
+Public Class ListKaryawan
 
-Public Class ListBarang
-
-    Private Sub FrmListBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ListKaryawan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         opendb()
         cmd.Connection = koneksi
-        cmd.CommandText = "SELECT * FROM TBarang"
+        cmd.CommandText = "SELECT * FROM TKaryawan"
         Dim rdr As SqlDataReader = cmd.ExecuteReader
         ListView1.Items.Clear()
         Do While rdr.Read
@@ -28,7 +27,7 @@ Public Class ListBarang
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         cmd.Connection = koneksi
-        cmd.CommandText = "SELECT * FROM TBarang where nama_barang like '" & TextBox1.Text & "%'"
+        cmd.CommandText = "SELECT * FROM TKaryawan where nama like '" & TextBox1.Text & "%'"
         rdr = cmd.ExecuteReader
         ListView1.Items.Clear()
         Do While rdr.Read
@@ -46,15 +45,6 @@ Public Class ListBarang
         rdr.Close()
     End Sub
 
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
-
-    End Sub
-
     Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim fontRegular As New Font("Arial", 10)
         Dim fontBold As New Font("Arial", 10, FontStyle.Bold)
@@ -65,7 +55,7 @@ Public Class ListBarang
         Dim rightMargin As Integer = e.MarginBounds.Right
 
         ' Header Laporan
-        e.Graphics.DrawString("Laporan Barang Toko SembaPAS", fontTitle, brush, leftMargin, yPos)
+        e.Graphics.DrawString("Laporan Karyawan Toko SembaPAS", fontTitle, brush, leftMargin, yPos)
         yPos += 30
         e.Graphics.DrawString("Jln. Rancapetir No. 6 Ciamis", fontRegular, brush, leftMargin, yPos)
         yPos += 20
@@ -73,11 +63,11 @@ Public Class ListBarang
         yPos += 30
 
         ' Kolom ListView
-        e.Graphics.DrawString("ID Barang", fontBold, brush, leftMargin, yPos)
-        e.Graphics.DrawString("Nama Barang", fontBold, brush, leftMargin + 100, yPos)
-        e.Graphics.DrawString("Harga", fontBold, brush, leftMargin + 300, yPos)
-        e.Graphics.DrawString("Qty", fontBold, brush, leftMargin + 400, yPos)
-        e.Graphics.DrawString("Stok", fontBold, brush, leftMargin + 450, yPos)
+        e.Graphics.DrawString("NIK", fontBold, brush, leftMargin, yPos)
+        e.Graphics.DrawString("Nama", fontBold, brush, leftMargin + 100, yPos)
+        e.Graphics.DrawString("Jabatan", fontBold, brush, leftMargin + 200, yPos)
+        e.Graphics.DrawString("Telepon", fontBold, brush, leftMargin + 320, yPos)
+        e.Graphics.DrawString("Alamat", fontBold, brush, leftMargin + 450, yPos)
         yPos += 20
         e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
         yPos += 10
@@ -86,8 +76,8 @@ Public Class ListBarang
         For Each item As ListViewItem In ListView1.Items
             e.Graphics.DrawString(item.SubItems(0).Text, fontRegular, brush, leftMargin, yPos)
             e.Graphics.DrawString(item.SubItems(1).Text, fontRegular, brush, leftMargin + 100, yPos)
-            e.Graphics.DrawString(FormatCurrency(item.SubItems(2).Text), fontRegular, brush, leftMargin + 300, yPos)
-            e.Graphics.DrawString(item.SubItems(3).Text, fontRegular, brush, leftMargin + 400, yPos)
+            e.Graphics.DrawString(item.SubItems(2).Text, fontRegular, brush, leftMargin + 200, yPos)
+            e.Graphics.DrawString(item.SubItems(3).Text, fontRegular, brush, leftMargin + 320, yPos)
             e.Graphics.DrawString(item.SubItems(4).Text, fontRegular, brush, leftMargin + 450, yPos)
             yPos += 20
         Next

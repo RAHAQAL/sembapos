@@ -24,7 +24,6 @@ Partial Class FrmUtama
     Private Sub InitializeComponent()
         Me.LOGOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LOGINToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANAGEUSERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MAINTENANCEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarangToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,90 +42,84 @@ Partial Class FrmUtama
         'LOGOUTToolStripMenuItem
         '
         Me.LOGOUTToolStripMenuItem.Name = "LOGOUTToolStripMenuItem"
-        Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.LOGOUTToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.LOGOUTToolStripMenuItem.Text = "LOGOUT"
         '
         'FILEToolStripMenuItem
         '
-        Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LOGINToolStripMenuItem, Me.LOGOUTToolStripMenuItem})
+        Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LOGOUTToolStripMenuItem})
         Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
-        Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(47, 24)
+        Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.FILEToolStripMenuItem.Text = "FILE"
-        '
-        'LOGINToolStripMenuItem
-        '
-        Me.LOGINToolStripMenuItem.Name = "LOGINToolStripMenuItem"
-        Me.LOGINToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
-        Me.LOGINToolStripMenuItem.Text = "LOGIN"
         '
         'MANAGEUSERToolStripMenuItem
         '
         Me.MANAGEUSERToolStripMenuItem.Name = "MANAGEUSERToolStripMenuItem"
-        Me.MANAGEUSERToolStripMenuItem.Size = New System.Drawing.Size(179, 24)
+        Me.MANAGEUSERToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.MANAGEUSERToolStripMenuItem.Text = "MANAGE USER"
         '
         'MAINTENANCEToolStripMenuItem
         '
         Me.MAINTENANCEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MANAGEUSERToolStripMenuItem})
         Me.MAINTENANCEToolStripMenuItem.Name = "MAINTENANCEToolStripMenuItem"
-        Me.MAINTENANCEToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
+        Me.MAINTENANCEToolStripMenuItem.Size = New System.Drawing.Size(102, 20)
         Me.MAINTENANCEToolStripMenuItem.Text = "MAINTENANCE"
         '
         'BarangToolStripMenuItem1
         '
         Me.BarangToolStripMenuItem1.Name = "BarangToolStripMenuItem1"
-        Me.BarangToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
+        Me.BarangToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
         Me.BarangToolStripMenuItem1.Text = "BARANG"
         '
         'TRANSAKSIToolStripMenuItem
         '
         Me.TRANSAKSIToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenjualanToolStripMenuItem})
         Me.TRANSAKSIToolStripMenuItem.Name = "TRANSAKSIToolStripMenuItem"
-        Me.TRANSAKSIToolStripMenuItem.Size = New System.Drawing.Size(98, 24)
+        Me.TRANSAKSIToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
         Me.TRANSAKSIToolStripMenuItem.Text = "TRANSAKSI"
         '
         'PenjualanToolStripMenuItem
         '
         Me.PenjualanToolStripMenuItem.Name = "PenjualanToolStripMenuItem"
-        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
+        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.PenjualanToolStripMenuItem.Text = "PENJUALAN"
         '
         'KaryawanToolStripMenuItem
         '
         Me.KaryawanToolStripMenuItem.Name = "KaryawanToolStripMenuItem"
-        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(156, 24)
+        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.KaryawanToolStripMenuItem.Text = "KARYAWAN"
         '
         'BarangToolStripMenuItem
         '
         Me.BarangToolStripMenuItem.Name = "BarangToolStripMenuItem"
-        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(156, 24)
+        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.BarangToolStripMenuItem.Text = "BARANG"
         '
         'MASTERToolStripMenuItem
         '
         Me.MASTERToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarangToolStripMenuItem, Me.KaryawanToolStripMenuItem})
         Me.MASTERToolStripMenuItem.Name = "MASTERToolStripMenuItem"
-        Me.MASTERToolStripMenuItem.Size = New System.Drawing.Size(77, 24)
+        Me.MASTERToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.MASTERToolStripMenuItem.Text = "MASTER"
         '
         'LAPORANToolStripMenuItem
         '
         Me.LAPORANToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarangToolStripMenuItem1, Me.PENJUALANToolStripMenuItem1, Me.KARYAWANToolStripMenuItem1})
         Me.LAPORANToolStripMenuItem.Name = "LAPORANToolStripMenuItem"
-        Me.LAPORANToolStripMenuItem.Size = New System.Drawing.Size(87, 24)
+        Me.LAPORANToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
         Me.LAPORANToolStripMenuItem.Text = "LAPORAN"
         '
         'PENJUALANToolStripMenuItem1
         '
         Me.PENJUALANToolStripMenuItem1.Name = "PENJUALANToolStripMenuItem1"
-        Me.PENJUALANToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
+        Me.PENJUALANToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
         Me.PENJUALANToolStripMenuItem1.Text = "PENJUALAN"
         '
         'KARYAWANToolStripMenuItem1
         '
         Me.KARYAWANToolStripMenuItem1.Name = "KARYAWANToolStripMenuItem1"
-        Me.KARYAWANToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
+        Me.KARYAWANToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
         Me.KARYAWANToolStripMenuItem1.Text = "KARYAWAN"
         '
         'MenuStrip1
@@ -134,19 +127,20 @@ Partial Class FrmUtama
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MASTERToolStripMenuItem, Me.TRANSAKSIToolStripMenuItem, Me.LAPORANToolStripMenuItem, Me.MAINTENANCEToolStripMenuItem, Me.FILEToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1924, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1028, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FrmUtama
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.ClientSize = New System.Drawing.Size(1028, 609)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmUtama"
@@ -159,7 +153,6 @@ Partial Class FrmUtama
     End Sub
     Friend WithEvents LOGOUTToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FILEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LOGINToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MANAGEUSERToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MAINTENANCEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BarangToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem

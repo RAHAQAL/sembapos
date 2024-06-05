@@ -51,7 +51,7 @@ Public Class FrmListBarang
             Dim selectedItem As ListViewItem = ListView1.SelectedItems(0)
 
             FSales.txtBarang.Text = selectedItem.Text & " - " & selectedItem.SubItems(1).Text
-
+            FTambahStok.txtBarang.Text = selectedItem.Text & " - " & selectedItem.SubItems(1).Text
             Me.Close()
         End If
     End Sub
