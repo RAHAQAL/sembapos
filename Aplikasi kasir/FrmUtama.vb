@@ -8,14 +8,19 @@ Public Class FrmUtama
 #Region "SUB"
     Sub UpdateMenuBasedOnRole()
         If mroleid = "1" Then
-            MASTERToolStripMenuItem.Enabled = True
-            TRANSAKSIToolStripMenuItem.Enabled = True
+            MASTERToolStripMenuItem.Enabled = False
+            TRANSAKSIToolStripMenuItem.Enabled = False
             LAPORANToolStripMenuItem.Enabled = True
             MAINTENANCEToolStripMenuItem.Enabled = True
-        Else
+        ElseIf mroleid = "2" Then
+            MASTERToolStripMenuItem.Enabled = True
+            TRANSAKSIToolStripMenuItem.Enabled = False
+            LAPORANToolStripMenuItem.Enabled = False
+            MAINTENANCEToolStripMenuItem.Enabled = False
+        ElseIf mroleid = "3" Then
             MASTERToolStripMenuItem.Enabled = False
             TRANSAKSIToolStripMenuItem.Enabled = True
-            LAPORANToolStripMenuItem.Enabled = True
+            LAPORANToolStripMenuItem.Enabled = False
             MAINTENANCEToolStripMenuItem.Enabled = False
         End If
     End Sub

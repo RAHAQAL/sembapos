@@ -475,4 +475,116 @@ Public Class FrmBarang
     Private Sub txtStok_TextChanged(sender As Object, e As EventArgs) Handles txtStok.TextChanged
 
     End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs)
+        
+    End Sub
+
+    Private Sub btnPenjualan_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FSales.Show()
+    End Sub
+
+    Private Sub btnKaryawan_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmKaryawan.Show()
+    End Sub
+
+    Private Sub btnUser_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmUser.Show()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+        ' Tampilkan kotak dialog konfirmasi
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Jika pengguna memilih Yes, maka tutup form
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        'Me.Hide()
+        ListPenjualan.Show()
+    End Sub
+
+    Private Sub btnDashboard_Click_1(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Me.Hide()
+        Dashboard.Show()
+    End Sub
+
+    Private Sub btnPenjualan_Click_1(sender As Object, e As EventArgs) Handles btnPenjualan.Click
+        Me.Hide()
+        FSales.Show()
+    End Sub
+
+    Private Sub btnKaryawan_Click_1(sender As Object, e As EventArgs) Handles btnKaryawan.Click
+        Me.Hide()
+        FrmKaryawan.Show()
+    End Sub
+
+    Private Sub btnUser_Click_1(sender As Object, e As EventArgs) Handles btnUser.Click
+        Me.Hide()
+        FrmUser.Show()
+    End Sub
+
+    Private Sub btnLogout_Click_1(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ' Tampilkan kotak dialog konfirmasi
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Jika pengguna memilih Yes, maka tutup form
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
+        FrmListBarang.Show()
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If txtBarang.Text = "" Then
+            MsgBox("ID Barang masih kosong, silahkan diisi dulu...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Informasi")
+            txtBarang.Focus()
+            Exit Sub
+        ElseIf nudQty.Value = 0 Then
+            MsgBox("Qty masih kosong, silahkan diisi dulu...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Informasi")
+            nudQty.Focus()
+            Exit Sub
+        Else
+            Dim karakter As String = txtBarang.Text.Substring(0, 5)
+
+            ' Query untuk memeriksa apakah id_barang ada dalam database
+            Dim queryCheckIdBarang As String = "SELECT COUNT(*) FROM TBarang WHERE LEFT(id_barang, 5) = @karakter"
+            cmd.CommandText = queryCheckIdBarang
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@karakter", karakter)
+
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            If count = 0 Then
+                MsgBox("ID Barang tidak ditemukan dalam database.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Informasi")
+                Exit Sub
+            End If
+
+            ' Jika id_barang ditemukan dalam database, lanjutkan dengan menambahkan stok
+            Dim queryUpdateStok As String = "UPDATE TBarang SET stok = stok + @qty WHERE LEFT(id_barang, 5) = @karakter"
+            cmd.CommandText = queryUpdateStok
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(nudQty.Value))
+            cmd.Parameters.AddWithValue("@karakter", karakter)
+            cmd.ExecuteNonQuery()
+
+            MsgBox("Stok barang berhasil diperbarui", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Informasi")
+            txtBarang.Clear()
+            nudQty.Value = 0
+            FrmBarang_Load(Nothing, Nothing)
+        End If
+    End Sub
 End Class

@@ -110,6 +110,9 @@ Partial Class ListBarang
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
+        'PrintDocument1
+        '
+        '
         'PrintPreviewDialog1
         '
         Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -132,7 +135,6 @@ Partial Class ListBarang
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ListBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ListBarang"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

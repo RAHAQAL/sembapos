@@ -132,7 +132,6 @@ Partial Class ListKaryawan
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "ListKaryawan"
-        Me.Text = "ListKaryawan"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

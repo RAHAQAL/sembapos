@@ -46,9 +46,9 @@ CONSTRAINT id_user FOREIGN KEY (nik) REFERENCES TKaryawan (nik)
 --ON DELETE CASCADE
 
 insert into Tuser values ('U-111','11111','Fahri','1')
-insert into Tuser values ('U-112','11112','Alen','1')
-insert into Tuser values ('U-113','11113','Deni','2')
-insert into Tuser values ('U-114','11114','Rakha','2')
+insert into Tuser values ('U-112','11112','Alen','2')
+insert into Tuser values ('U-113','11113','Deni','3')
+insert into Tuser values ('U-114','11114','Rakha','3')
 
 drop table Tuser
 select*from Tuser

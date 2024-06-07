@@ -49,7 +49,7 @@ Partial Class FrmUtama
         '
         Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LOGOUTToolStripMenuItem})
         Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
-        Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
+        Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(96, 19)
         Me.FILEToolStripMenuItem.Text = "FILE"
         '
         'MANAGEUSERToolStripMenuItem
@@ -62,7 +62,7 @@ Partial Class FrmUtama
         '
         Me.MAINTENANCEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MANAGEUSERToolStripMenuItem})
         Me.MAINTENANCEToolStripMenuItem.Name = "MAINTENANCEToolStripMenuItem"
-        Me.MAINTENANCEToolStripMenuItem.Size = New System.Drawing.Size(102, 20)
+        Me.MAINTENANCEToolStripMenuItem.Size = New System.Drawing.Size(96, 19)
         Me.MAINTENANCEToolStripMenuItem.Text = "MAINTENANCE"
         '
         'BarangToolStripMenuItem1
@@ -75,39 +75,39 @@ Partial Class FrmUtama
         '
         Me.TRANSAKSIToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenjualanToolStripMenuItem})
         Me.TRANSAKSIToolStripMenuItem.Name = "TRANSAKSIToolStripMenuItem"
-        Me.TRANSAKSIToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.TRANSAKSIToolStripMenuItem.Size = New System.Drawing.Size(96, 19)
         Me.TRANSAKSIToolStripMenuItem.Text = "TRANSAKSI"
         '
         'PenjualanToolStripMenuItem
         '
         Me.PenjualanToolStripMenuItem.Name = "PenjualanToolStripMenuItem"
-        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PenjualanToolStripMenuItem.Text = "PENJUALAN"
         '
         'KaryawanToolStripMenuItem
         '
         Me.KaryawanToolStripMenuItem.Name = "KaryawanToolStripMenuItem"
-        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.KaryawanToolStripMenuItem.Text = "KARYAWAN"
         '
         'BarangToolStripMenuItem
         '
         Me.BarangToolStripMenuItem.Name = "BarangToolStripMenuItem"
-        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BarangToolStripMenuItem.Text = "BARANG"
         '
         'MASTERToolStripMenuItem
         '
         Me.MASTERToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarangToolStripMenuItem, Me.KaryawanToolStripMenuItem})
         Me.MASTERToolStripMenuItem.Name = "MASTERToolStripMenuItem"
-        Me.MASTERToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
+        Me.MASTERToolStripMenuItem.Size = New System.Drawing.Size(96, 19)
         Me.MASTERToolStripMenuItem.Text = "MASTER"
         '
         'LAPORANToolStripMenuItem
         '
         Me.LAPORANToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarangToolStripMenuItem1, Me.PENJUALANToolStripMenuItem1, Me.KARYAWANToolStripMenuItem1})
         Me.LAPORANToolStripMenuItem.Name = "LAPORANToolStripMenuItem"
-        Me.LAPORANToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
+        Me.LAPORANToolStripMenuItem.Size = New System.Drawing.Size(96, 19)
         Me.LAPORANToolStripMenuItem.Text = "LAPORAN"
         '
         'PENJUALANToolStripMenuItem1
@@ -124,11 +124,14 @@ Partial Class FrmUtama
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.White
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MASTERToolStripMenuItem, Me.TRANSAKSIToolStripMenuItem, Me.LAPORANToolStripMenuItem, Me.MAINTENANCEToolStripMenuItem, Me.FILEToolStripMenuItem})
+        Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1028, 24)
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.MenuStrip1.Size = New System.Drawing.Size(1370, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -137,10 +140,10 @@ Partial Class FrmUtama
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(1028, 609)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmUtama"

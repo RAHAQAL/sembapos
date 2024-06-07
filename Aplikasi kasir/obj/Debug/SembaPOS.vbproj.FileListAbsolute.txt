@@ -66,5 +66,4 @@ C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLI
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Resources.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\SembaPOS.vbproj.GenerateResource.Cache
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FSales.resources
-C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FTambahStok.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListKaryawan.resources

@@ -493,4 +493,65 @@ Public Class FrmUser
         FrmListKaryawan.Show()
     End Sub
 
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs)
+       
+    End Sub
+
+    Private Sub btnPenjualan_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FSales.Show()
+    End Sub
+
+    Private Sub btnBarang_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmBarang.Show()
+    End Sub
+
+    Private Sub btnKaryawan_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmKaryawan.Show()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+        
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        'Me.Hide()
+        ListPenjualan.Show()
+    End Sub
+
+    Private Sub btnDashboard_Click_1(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Me.Hide()
+        Dashboard.Show()
+    End Sub
+
+    Private Sub btnPenjualan_Click_1(sender As Object, e As EventArgs) Handles btnPenjualan.Click
+        Me.Hide()
+        FSales.Show()
+    End Sub
+
+    Private Sub btnBarang_Click_1(sender As Object, e As EventArgs) Handles btnBarang.Click
+        Me.Hide()
+        FrmBarang.Show()
+    End Sub
+
+    Private Sub btnKaryawan_Click_1(sender As Object, e As EventArgs) Handles btnKaryawan.Click
+        Me.Hide()
+        FrmKaryawan.Show()
+    End Sub
+
+    Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
+
+    End Sub
+
+    Private Sub btnLogout_Click_1(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ' Tampilkan kotak dialog konfirmasi
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Jika pengguna memilih Yes, maka tutup form
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
 End Class

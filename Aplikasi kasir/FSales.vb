@@ -446,4 +446,79 @@ Public Class FSales
 
 
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+
+    Private Sub btnBarang_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmBarang.Show()
+    End Sub
+
+    Private Sub btnKaryawan_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmKaryawan.Show()
+    End Sub
+
+    Private Sub btnUser_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        FrmUser.Show()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+        
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        'Me.Hide()
+        ListPenjualan.Show()
+    End Sub
+
+    Private Sub btnLogout_Click_1(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ' Tampilkan kotak dialog konfirmasi
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Jika pengguna memilih Yes, maka tutup form
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+
+    End Sub
+
+    Private Sub btnUser_Click_1(sender As Object, e As EventArgs) Handles btnUser.Click
+        Me.Hide()
+        FrmUser.Show()
+    End Sub
+
+    Private Sub btnKaryawan_Click_1(sender As Object, e As EventArgs) Handles btnKaryawan.Click
+        Me.Hide()
+        FrmKaryawan.Show()
+    End Sub
+
+    Private Sub btnBarang_Click_1(sender As Object, e As EventArgs) Handles btnBarang.Click
+        Me.Hide()
+        FrmBarang.Show()
+    End Sub
+
+    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+
+    End Sub
+
+
+    Private Sub btnDashboard_Click_1(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Me.Hide()
+        Dashboard.Show()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
+
+    End Sub
 End Class
