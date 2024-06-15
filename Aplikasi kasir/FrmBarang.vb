@@ -96,7 +96,7 @@ Public Class FrmBarang
 
 
     Private Sub FrmBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        UpdateMenuBasedOnRole()
         opendb()
         listdata()
 
@@ -586,5 +586,9 @@ Public Class FrmBarang
             nudQty.Value = 0
             FrmBarang_Load(Nothing, Nothing)
         End If
+    End Sub
+
+    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+
     End Sub
 End Class

@@ -76,7 +76,7 @@ Public Class FSales
 
 
     Private Sub FSales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        UpdateMenuBasedOnRole()
         dtpTanggal.Format = DateTimePickerFormat.Custom
         dtpTanggal.CustomFormat = "yyyy/MM/dd"
         opendb()

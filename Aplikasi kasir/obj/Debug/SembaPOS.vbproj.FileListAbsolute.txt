@@ -67,3 +67,25 @@ C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLI
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\SembaPOS.vbproj.GenerateResource.Cache
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FSales.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListKaryawan.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe.config
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.xml
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.pdb
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.pdb
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.xml
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\SembaPOS.vbprojResolveAssemblyReference.cache
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Dashboard.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmBarang.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmKaryawan.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmListBarang.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmListKaryawan.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmUser.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmUtama.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FSales.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListBarang.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListKaryawan.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListPenjualan.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.LoginForm1.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Resources.resources
+C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\SembaPOS.vbproj.GenerateResource.Cache

@@ -486,7 +486,7 @@ Public Class FrmUser
     Private Sub FrmUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         opendb()
         listdata()
-
+        UpdateMenuBasedOnRole()
     End Sub
 
     Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click

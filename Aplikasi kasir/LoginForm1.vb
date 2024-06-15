@@ -62,13 +62,13 @@ Public Class LoginForm1
                         txtuser.Text = ""
                         txtPassword.Text = ""
 
-                        FrmUtama.Show()
+                        Dashboard.Show()
 
 
                         ' Beri tahu form utama bahwa login berhasil
-                        Dim Utama As FrmUtama = DirectCast(Application.OpenForms("FrmUtama"), FrmUtama)
+                        Dim Utama As Dashboard = DirectCast(Application.OpenForms("Dashboard"), Dashboard)
                         If Utama IsNot Nothing Then
-                            FrmUtama.UpdateMenuBasedOnRole()
+                            UpdateMenuBasedOnRole()
                         End If
 
                         cmd.Dispose()
@@ -81,11 +81,11 @@ Public Class LoginForm1
                         txtuser.Text = ""
                         txtPassword.Text = ""
 
-                        FrmUtama.Show()
+                        Dashboard.Show()
 
-                        Dim Utama As FrmUtama = DirectCast(Application.OpenForms("FrmUtama"), FrmUtama)
+                        Dim Utama As Dashboard = DirectCast(Application.OpenForms("Dashboard"), Dashboard)
                         If Utama IsNot Nothing Then
-                            FrmUtama.UpdateMenuBasedOnRole()
+                            UpdateMenuBasedOnRole()
                         End If
 
                         cmd.Dispose()

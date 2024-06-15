@@ -6,24 +6,24 @@ Public Class FrmUtama
 
 
 #Region "SUB"
-    Sub UpdateMenuBasedOnRole()
-        If mroleid = "1" Then
-            MASTERToolStripMenuItem.Enabled = False
-            TRANSAKSIToolStripMenuItem.Enabled = False
-            LAPORANToolStripMenuItem.Enabled = True
-            MAINTENANCEToolStripMenuItem.Enabled = True
-        ElseIf mroleid = "2" Then
-            MASTERToolStripMenuItem.Enabled = True
-            TRANSAKSIToolStripMenuItem.Enabled = False
-            LAPORANToolStripMenuItem.Enabled = False
-            MAINTENANCEToolStripMenuItem.Enabled = False
-        ElseIf mroleid = "3" Then
-            MASTERToolStripMenuItem.Enabled = False
-            TRANSAKSIToolStripMenuItem.Enabled = True
-            LAPORANToolStripMenuItem.Enabled = False
-            MAINTENANCEToolStripMenuItem.Enabled = False
-        End If
-    End Sub
+    'Sub UpdateMenuBasedOnRole()
+    '    If mroleid = "1" Then
+    '        MASTERToolStripMenuItem.Enabled = False
+    '        TRANSAKSIToolStripMenuItem.Enabled = False
+    '        LAPORANToolStripMenuItem.Enabled = True
+    '        MAINTENANCEToolStripMenuItem.Enabled = True
+    '    ElseIf mroleid = "2" Then
+    '        MASTERToolStripMenuItem.Enabled = True
+    '        TRANSAKSIToolStripMenuItem.Enabled = False
+    '        LAPORANToolStripMenuItem.Enabled = False
+    '        MAINTENANCEToolStripMenuItem.Enabled = False
+    '    ElseIf mroleid = "3" Then
+    '        MASTERToolStripMenuItem.Enabled = False
+    '        TRANSAKSIToolStripMenuItem.Enabled = True
+    '        LAPORANToolStripMenuItem.Enabled = False
+    '        MAINTENANCEToolStripMenuItem.Enabled = False
+    '    End If
+    'End Sub
 
 
     'Sub OpenFormInTab(ByVal childForm As Form)
@@ -67,7 +67,7 @@ Public Class FrmUtama
 #End Region
 
     Private Sub FrmUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UpdateMenuBasedOnRole()
+        'UpdateMenuBasedOnRole()
     End Sub
 
     'Private Sub LOGINToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGINToolStripMenuItem.Click

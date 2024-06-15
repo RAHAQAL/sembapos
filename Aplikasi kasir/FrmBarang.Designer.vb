@@ -58,13 +58,13 @@ Partial Class FrmBarang
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.nudQty = New System.Windows.Forms.NumericUpDown()
         Me.btnCari = New System.Windows.Forms.Button()
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -313,7 +313,7 @@ Partial Class FrmBarang
         Me.Panel7.Location = New System.Drawing.Point(0, 46)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(223, 699)
+        Me.Panel7.Size = New System.Drawing.Size(223, 703)
         Me.Panel7.TabIndex = 40
         '
         'btnLaporan
@@ -464,7 +464,7 @@ Partial Class FrmBarang
         Me.Panel8.Location = New System.Drawing.Point(0, 0)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1366, 46)
+        Me.Panel8.Size = New System.Drawing.Size(1370, 46)
         Me.Panel8.TabIndex = 39
         '
         'Panel1
@@ -504,17 +504,6 @@ Partial Class FrmBarang
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(370, 220)
         Me.Panel2.TabIndex = 42
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(33, 26)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(116, 23)
-        Me.Label8.TabIndex = 43
-        Me.Label8.Text = "Tambah Stok"
         '
         'Button1
         '
@@ -578,6 +567,17 @@ Partial Class FrmBarang
         Me.Label10.Size = New System.Drawing.Size(49, 17)
         Me.Label10.TabIndex = 44
         Me.Label10.Text = "Barang"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(33, 26)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(116, 23)
+        Me.Label8.TabIndex = 43
+        Me.Label8.Text = "Tambah Stok"
         '
         'Panel4
         '

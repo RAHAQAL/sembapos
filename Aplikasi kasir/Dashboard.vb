@@ -4,6 +4,9 @@ Imports System.Windows.Forms
 
 Public Class Dashboard
 
+#Region "SUB"
+    
+#End Region
 
     Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
         Label6.Visible = False
@@ -16,7 +19,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        UpdateMenuBasedOnRole()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
@@ -92,6 +95,7 @@ Public Class Dashboard
         ' Jika pengguna memilih Yes, maka tutup form
         If result = DialogResult.Yes Then
             Me.Close()
+
         End If
     End Sub
 

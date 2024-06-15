@@ -93,7 +93,7 @@ Public Class FrmKaryawan
 #End Region
 
     Private Sub FrmKaryawan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        UpdateMenuBasedOnRole()
         opendb()
         listdata()
 
