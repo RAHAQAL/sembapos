@@ -32,7 +32,7 @@ insert into TKaryawan values ('11113','Deni','Operator','082188889999','Ciamis')
 insert into TKaryawan values ('11114','Rakha','PA','082152189333','Banjar')
 
 drop table TKaryawan
-select*from TKaryawan
+select*from TKaryawan	
 delete from TKaryawan
 
 CREATE TABLE Tuser (

@@ -428,17 +428,17 @@ Public Class FrmBarang
 
 
     Private Sub btnPenjualan_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+        Me.Close()
         FSales.Show()
     End Sub
 
     Private Sub btnKaryawan_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+        Me.Close()
         FrmKaryawan.Show()
     End Sub
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+        Me.Close()
         FrmUser.Show()
     End Sub
 
@@ -450,22 +450,22 @@ Public Class FrmBarang
     End Sub
 
     Private Sub btnDashboard_Click_1(sender As Object, e As EventArgs) Handles btnDashboard.Click
-        Me.Hide()
+        Me.Close()
         Dashboard.Show()
     End Sub
 
     Private Sub btnPenjualan_Click_1(sender As Object, e As EventArgs) Handles btnPenjualan.Click
-        Me.Hide()
+        Me.Close()
         FSales.Show()
     End Sub
 
     Private Sub btnKaryawan_Click_1(sender As Object, e As EventArgs) Handles btnKaryawan.Click
-        Me.Hide()
+        Me.Close()
         FrmKaryawan.Show()
     End Sub
 
     Private Sub btnUser_Click_1(sender As Object, e As EventArgs) Handles btnUser.Click
-        Me.Hide()
+        Me.Close()
         FrmUser.Show()
     End Sub
 

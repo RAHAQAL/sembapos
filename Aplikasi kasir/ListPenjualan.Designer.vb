@@ -36,6 +36,8 @@ Partial Class ListPenjualan
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDocument2 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog2 = New System.Windows.Forms.PrintPreviewDialog()
         Me.SuspendLayout()
         '
         'ListView1
@@ -116,7 +118,7 @@ Partial Class ListPenjualan
         'btnPrint
         '
         Me.btnPrint.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Location = New System.Drawing.Point(518, 55)
+        Me.btnPrint.Location = New System.Drawing.Point(815, 55)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 30)
         Me.btnPrint.TabIndex = 66
@@ -135,6 +137,19 @@ Partial Class ListPenjualan
         Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
+        '
+        'PrintDocument2
+        '
+        '
+        'PrintPreviewDialog2
+        '
+        Me.PrintPreviewDialog2.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog2.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog2.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog2.Enabled = True
+        Me.PrintPreviewDialog2.Icon = CType(resources.GetObject("PrintPreviewDialog2.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog2.Name = "PrintPreviewDialog2"
+        Me.PrintPreviewDialog2.Visible = False
         '
         'ListPenjualan
         '
@@ -169,4 +184,6 @@ Partial Class ListPenjualan
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents PrintDocument2 As System.Drawing.Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog2 As System.Windows.Forms.PrintPreviewDialog
 End Class

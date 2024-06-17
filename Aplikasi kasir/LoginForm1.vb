@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms
+Imports System.Data.SqlClient
 
 
 
@@ -9,99 +10,77 @@ Public Class LoginForm1
 #Region "SUB"
     Sub login()
         Try
-            'Mencari data user berdasarkan NIK yang dimasukkan pada txtuser
-            'CekUser()
-            'tidak boleh mengkosongkan username & password
-
-            If txtuser.Text.Trim() = "" And _
-                   txtPassword.Text.Trim() = "" Then
-                MsgBox("Masukan Username dan Password", MsgBoxStyle.OkOnly, "POS")
+            ' Validasi input
+            If txtuser.Text.Trim() = "" And txtPassword.Text.Trim() = "" Then
+                MsgBox("Masukkan Username dan Password", MsgBoxStyle.OkOnly, "POS")
                 txtuser.Focus()
-            ElseIf txtuser.Text = "" Then
-                MsgBox("Masukan Username ", MsgBoxStyle.OkOnly, "POS")
+                Return
+            ElseIf txtuser.Text.Trim() = "" Then
+                MsgBox("Masukkan Username", MsgBoxStyle.OkOnly, "POS")
                 txtuser.Focus()
-            ElseIf txtPassword.Text = "" Then
-                MsgBox("Masukan password ", MsgBoxStyle.OkOnly, "POS")
+                Return
+            ElseIf txtPassword.Text.Trim() = "" Then
+                MsgBox("Masukkan Password", MsgBoxStyle.OkOnly, "POS")
                 txtPassword.Focus()
-            Else
-                cekuser()
-
-                'jika username dan password tidak kosong, maka program akan mengecek
-                'apakah data yang dicari tersedia pada objDataTable.
-                'Jika Tidak (baris data = 0 ) maka akan keluar pesan 
-                'bahwa username tidak ada
-
-                If rdr.HasRows = False Then
-                    MsgBox("Username tidak ada ", MsgBoxStyle.OkOnly, "POS")
-                    cmd.Dispose() : rdr.Close()
-                    txtuser.Clear() : txtuser.Focus()
-                Else
-                    cmd.Dispose() : rdr.Close()
-                    'jika data yang di cari ada, maka program akan mencari password
-                    'berdasarkan username (NIK) yang dimasukkan.
-                    Find_User()
-                    'jika password yang di masukkan salah atau tidak sama
-                    ' dengan yang ada pada tabel, maka akan keluar pesan dari program
-                    If mpassword <> Trim(txtPassword.Text) Then
-                        MsgBox("Password salah!", MsgBoxStyle.OkOnly, "POS")
-                        cmd.Dispose() : rdr.Close()
-                        txtPassword.Clear() : txtPassword.Focus()
-
-                        jumlahPercobaanGagal += 1
-                        If jumlahPercobaanGagal >= 3 Then
-                            MsgBox("Anda sudah melebihi batas percobaan gagal. Program akan ditutup.", MsgBoxStyle.OkOnly, "POS")
-                            Me.Close()
-                        End If
-
-
-                        Exit Sub
-                    ElseIf mroleid = "1" Then
-                        'Jika benar program akan menampilkan pada form utama
-                        loggedInUserName = mnama
-
-                        txtuser.Text = ""
-                        txtPassword.Text = ""
-
-                        Dashboard.Show()
-
-
-                        ' Beri tahu form utama bahwa login berhasil
-                        Dim Utama As Dashboard = DirectCast(Application.OpenForms("Dashboard"), Dashboard)
-                        If Utama IsNot Nothing Then
-                            UpdateMenuBasedOnRole()
-                        End If
-
-                        cmd.Dispose()
-                        rdr.Close()
-                        Me.Hide()
-
-                    Else
-                        loggedInUserName = mnama
-
-                        txtuser.Text = ""
-                        txtPassword.Text = ""
-
-                        Dashboard.Show()
-
-                        Dim Utama As Dashboard = DirectCast(Application.OpenForms("Dashboard"), Dashboard)
-                        If Utama IsNot Nothing Then
-                            UpdateMenuBasedOnRole()
-                        End If
-
-                        cmd.Dispose()
-                        rdr.Close()
-                        Me.Hide()
-                    End If
-                End If
+                Return
             End If
+
+            cekuser()
+
+            ' Cek apakah username ada
+            If rdr.HasRows = False Then
+                MsgBox("Username tidak ada", MsgBoxStyle.OkOnly, "POS")
+                cmd.Dispose()
+                rdr.Close()
+                txtuser.Clear()
+                txtuser.Focus()
+                Return
+            End If
+
+            cmd.Dispose()
+            rdr.Close()
+
+            ' Cek password
+            Find_User()
+
+            If mpassword <> Trim(txtPassword.Text) Then
+                MsgBox("Password salah!", MsgBoxStyle.OkOnly, "POS")
+                cmd.Dispose()
+                rdr.Close()
+                txtPassword.Clear()
+                txtPassword.Focus()
+
+                jumlahPercobaanGagal += 1
+                If jumlahPercobaanGagal >= 3 Then
+                    MsgBox("Anda sudah melebihi batas percobaan gagal. Program akan ditutup.", MsgBoxStyle.OkOnly, "POS")
+                    Me.Close()
+                End If
+
+                Return
+            End If
+
+            ' Login berhasil, sesuaikan menu berdasarkan role
+            loggedInUserName = mnama
+            txtuser.Text = ""
+            txtPassword.Text = ""
+
+            Dashboard.Show()
+
+            ' Beri tahu form utama bahwa login berhasil
+            Dim Utama As Dashboard = DirectCast(Application.OpenForms("Dashboard"), Dashboard)
+            If Utama IsNot Nothing Then
+                UpdateMenuBasedOnRole()
+            End If
+
+            cmd.Dispose()
+            rdr.Close()
+            Me.Hide()
+
         Catch When Err.Number <> 0
-            MsgBox("Tidak dapat melakukan proses" _
-            & vbCrLf & Err.Description)
+            MsgBox("Tidak dapat melakukan proses" & vbCrLf & Err.Description)
             koneksi.Close()
         End Try
-
     End Sub
-
 
 
 

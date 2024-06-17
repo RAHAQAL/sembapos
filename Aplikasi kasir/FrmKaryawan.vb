@@ -432,22 +432,22 @@ Public Class FrmKaryawan
     End Sub
 
     Private Sub btnDashboard_Click_1(sender As Object, e As EventArgs) Handles btnDashboard.Click
-        Me.Hide()
+        Me.Close()
         Dashboard.Show()
     End Sub
 
     Private Sub btnPenjualan_Click_1(sender As Object, e As EventArgs) Handles btnPenjualan.Click
-        Me.Hide()
+        Me.Close()
         FSales.Show()
     End Sub
 
     Private Sub btnBarang_Click_1(sender As Object, e As EventArgs) Handles btnBarang.Click
-        Me.Hide()
+        Me.Close()
         FrmBarang.Show()
     End Sub
 
     Private Sub btnUser_Click_1(sender As Object, e As EventArgs) Handles btnUser.Click
-        Me.Hide()
+        Me.Close()
         FrmUser.Show()
     End Sub
 

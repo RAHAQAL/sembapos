@@ -40,89 +40,119 @@ Module POS
     End Sub
 
     Public Sub UpdateMenuBasedOnRole()
-        If mroleid = "1" Then
-            Dashboard.btnPenjualan.Enabled = False
-            FrmBarang.btnPenjualan.Enabled = False
-            FrmKaryawan.btnPenjualan.Enabled = False
-            FrmUser.btnPenjualan.Enabled = False
+        Select Case mroleid
+            Case "1"
+                ' Role 1 settings
+                Dashboard.btnPenjualan.Enabled = False
+                FrmBarang.btnPenjualan.Enabled = False
+                FrmKaryawan.btnPenjualan.Enabled = False
+                FrmUser.btnPenjualan.Enabled = False
 
-            Dashboard.btnKaryawan.Enabled = True
-            FrmBarang.btnKaryawan.Enabled = True
-            FrmKaryawan.btnKaryawan.Enabled = True
-            FrmUser.btnKaryawan.Enabled = True
+                Dashboard.btnKaryawan.Enabled = True
+                FrmBarang.btnKaryawan.Enabled = True
+                FrmKaryawan.btnKaryawan.Enabled = True
+                FrmUser.btnKaryawan.Enabled = True
 
-            Dashboard.btnBarang.Enabled = False
-            FrmBarang.btnBarang.Enabled = False
-            FrmKaryawan.btnBarang.Enabled = False
-            FrmUser.btnBarang.Enabled = False
+                Dashboard.btnBarang.Enabled = False
+                FrmBarang.btnBarang.Enabled = False
+                FrmKaryawan.btnBarang.Enabled = False
+                FrmUser.btnBarang.Enabled = False
 
-            Dashboard.btnUser.Enabled = False
-            FrmBarang.btnUser.Enabled = False
-            FrmKaryawan.btnUser.Enabled = False
-            FrmUser.btnUser.Enabled = False
+                Dashboard.btnUser.Enabled = False
+                FrmBarang.btnUser.Enabled = False
+                FrmKaryawan.btnUser.Enabled = False
+                FrmUser.btnUser.Enabled = False
 
-            Dashboard.btnLaporan.Enabled = True
-            FrmBarang.btnLaporan.Enabled = True
-            FrmKaryawan.btnLaporan.Enabled = True
-            FrmUser.btnLaporan.Enabled = True
+                Dashboard.btnLaporan.Enabled = True
+                FrmBarang.btnLaporan.Enabled = True
+                FrmKaryawan.btnLaporan.Enabled = True
+                FrmUser.btnLaporan.Enabled = True
 
-        ElseIf mroleid = "2" Then
-            Dashboard.btnPenjualan.Enabled = False
-            FrmBarang.btnPenjualan.Enabled = False
-            FrmKaryawan.btnPenjualan.Enabled = False
-            FrmUser.btnPenjualan.Enabled = False
+            Case "2"
+                ' Role 2 settings
+                Dashboard.btnPenjualan.Enabled = False
+                FrmBarang.btnPenjualan.Enabled = False
+                FrmKaryawan.btnPenjualan.Enabled = False
+                FrmUser.btnPenjualan.Enabled = False
 
-            Dashboard.btnKaryawan.Enabled = False
-            FrmBarang.btnKaryawan.Enabled = False
-            FrmKaryawan.btnKaryawan.Enabled = False
-            FrmUser.btnKaryawan.Enabled = False
+                Dashboard.btnKaryawan.Enabled = False
+                FrmBarang.btnKaryawan.Enabled = False
+                FrmKaryawan.btnKaryawan.Enabled = False
+                FrmUser.btnKaryawan.Enabled = False
 
-            Dashboard.btnBarang.Enabled = True
-            FrmBarang.btnBarang.Enabled = True
-            FrmKaryawan.btnBarang.Enabled = True
-            FrmUser.btnBarang.Enabled = True
+                Dashboard.btnBarang.Enabled = True
+                FrmBarang.btnBarang.Enabled = True
+                FrmKaryawan.btnBarang.Enabled = True
+                FrmUser.btnBarang.Enabled = True
 
-            Dashboard.btnUser.Enabled = True
-            FrmBarang.btnUser.Enabled = True
-            FrmKaryawan.btnUser.Enabled = True
-            FrmUser.btnUser.Enabled = True
+                Dashboard.btnUser.Enabled = True
+                FrmBarang.btnUser.Enabled = True
+                FrmKaryawan.btnUser.Enabled = True
+                FrmUser.btnUser.Enabled = True
 
-            Dashboard.btnLaporan.Enabled = False
-            FrmBarang.btnLaporan.Enabled = False
-            FrmKaryawan.btnLaporan.Enabled = False
-            FrmUser.btnLaporan.Enabled = False
+                Dashboard.btnLaporan.Enabled = False
+                FrmBarang.btnLaporan.Enabled = False
+                FrmKaryawan.btnLaporan.Enabled = False
+                FrmUser.btnLaporan.Enabled = False
 
-        ElseIf mroleid = "3" Then
-            Dashboard.btnPenjualan.Enabled = True
-            FrmBarang.btnPenjualan.Enabled = True
-            FrmKaryawan.btnPenjualan.Enabled = True
-            FrmUser.btnPenjualan.Enabled = True
+            Case "3"
+                ' Role 3 settings
+                Dashboard.btnPenjualan.Enabled = True
+                FrmBarang.btnPenjualan.Enabled = True
+                FrmKaryawan.btnPenjualan.Enabled = True
+                FrmUser.btnPenjualan.Enabled = True
 
-            Dashboard.btnKaryawan.Enabled = False
-            FrmBarang.btnKaryawan.Enabled = False
-            FrmKaryawan.btnKaryawan.Enabled = False
-            FrmUser.btnKaryawan.Enabled = False
-            FSales.btnKaryawan.Enabled = False
+                Dashboard.btnKaryawan.Enabled = False
+                FrmBarang.btnKaryawan.Enabled = False
+                FrmKaryawan.btnKaryawan.Enabled = False
+                FrmUser.btnKaryawan.Enabled = False
+                FSales.btnKaryawan.Enabled = False
 
-            Dashboard.btnBarang.Enabled = False
-            FrmBarang.btnBarang.Enabled = False
-            FrmKaryawan.btnBarang.Enabled = False
-            FrmUser.btnBarang.Enabled = False
-            FSales.btnBarang.Enabled = False
+                Dashboard.btnBarang.Enabled = False
+                FrmBarang.btnBarang.Enabled = False
+                FrmKaryawan.btnBarang.Enabled = False
+                FrmUser.btnBarang.Enabled = False
+                FSales.btnBarang.Enabled = False
 
-            Dashboard.btnUser.Enabled = False
-            FrmBarang.btnUser.Enabled = False
-            FrmKaryawan.btnUser.Enabled = False
-            FrmUser.btnUser.Enabled = False
-            FSales.btnUser.Enabled = False
+                Dashboard.btnUser.Enabled = False
+                FrmBarang.btnUser.Enabled = False
+                FrmKaryawan.btnUser.Enabled = False
+                FrmUser.btnUser.Enabled = False
+                FSales.btnUser.Enabled = False
 
-            Dashboard.btnLaporan.Enabled = False
-            FrmBarang.btnLaporan.Enabled = False
-            FrmKaryawan.btnLaporan.Enabled = False
-            FrmUser.btnLaporan.Enabled = False
-            FSales.btnLaporan.Enabled = False
+                Dashboard.btnLaporan.Enabled = False
+                FrmBarang.btnLaporan.Enabled = False
+                FrmKaryawan.btnLaporan.Enabled = False
+                FrmUser.btnLaporan.Enabled = False
+                FSales.btnLaporan.Enabled = False
 
-        End If
+            Case Else
+                ' Handle default case
+                Dashboard.btnPenjualan.Enabled = True
+                FrmBarang.btnPenjualan.Enabled = True
+                FrmKaryawan.btnPenjualan.Enabled = True
+                FrmUser.btnPenjualan.Enabled = True
+
+                Dashboard.btnKaryawan.Enabled = True
+                FrmBarang.btnKaryawan.Enabled = True
+                FrmKaryawan.btnKaryawan.Enabled = True
+                FrmUser.btnKaryawan.Enabled = True
+
+                Dashboard.btnBarang.Enabled = True
+                FrmBarang.btnBarang.Enabled = True
+                FrmKaryawan.btnBarang.Enabled = True
+                FrmUser.btnBarang.Enabled = True
+
+                Dashboard.btnUser.Enabled = True
+                FrmBarang.btnUser.Enabled = True
+                FrmKaryawan.btnUser.Enabled = True
+                FrmUser.btnUser.Enabled = True
+
+                Dashboard.btnLaporan.Enabled = True
+                FrmBarang.btnLaporan.Enabled = True
+                FrmKaryawan.btnLaporan.Enabled = True
+                FrmUser.btnLaporan.Enabled = True
+        End Select
     End Sub
 
 
