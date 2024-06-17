@@ -59,14 +59,11 @@ C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLI
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmListBarang.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmListKaryawan.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmUser.resources
-C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FrmUtama.resources
-C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListBarang.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListPenjualan.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.LoginForm1.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.Resources.resources
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\SembaPOS.vbproj.GenerateResource.Cache
 C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.FSales.resources
-C:\Users\Tsinta Nur Fajriah\OneDrive\Documents\FAHRI MUHAMMAD\KULIAH SEM 4\APPLICATION DEVELOPMENT PROJECT\PROJECT UAS\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi_Kasir.ListKaryawan.resources
 C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\bin\Debug\Aplikasi Kasir.exe.config
 C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.exe
 C:\Users\LAB1PC14\Desktop\sembapos\Aplikasi Kasir\obj\Debug\Aplikasi Kasir.xml

@@ -46,20 +46,20 @@ Module POS
             FrmKaryawan.btnPenjualan.Enabled = False
             FrmUser.btnPenjualan.Enabled = False
 
-            Dashboard.btnKaryawan.Enabled = False
-            FrmBarang.btnKaryawan.Enabled = False
-            FrmKaryawan.btnKaryawan.Enabled = False
-            FrmUser.btnKaryawan.Enabled = False
+            Dashboard.btnKaryawan.Enabled = True
+            FrmBarang.btnKaryawan.Enabled = True
+            FrmKaryawan.btnKaryawan.Enabled = True
+            FrmUser.btnKaryawan.Enabled = True
 
             Dashboard.btnBarang.Enabled = False
             FrmBarang.btnBarang.Enabled = False
             FrmKaryawan.btnBarang.Enabled = False
             FrmUser.btnBarang.Enabled = False
 
-            Dashboard.btnUser.Enabled = True
-            FrmBarang.btnUser.Enabled = True
-            FrmKaryawan.btnUser.Enabled = True
-            FrmUser.btnUser.Enabled = True
+            Dashboard.btnUser.Enabled = False
+            FrmBarang.btnUser.Enabled = False
+            FrmKaryawan.btnUser.Enabled = False
+            FrmUser.btnUser.Enabled = False
 
             Dashboard.btnLaporan.Enabled = True
             FrmBarang.btnLaporan.Enabled = True
@@ -72,20 +72,20 @@ Module POS
             FrmKaryawan.btnPenjualan.Enabled = False
             FrmUser.btnPenjualan.Enabled = False
 
-            Dashboard.btnKaryawan.Enabled = True
-            FrmBarang.btnKaryawan.Enabled = True
-            FrmKaryawan.btnKaryawan.Enabled = True
-            FrmUser.btnKaryawan.Enabled = True
+            Dashboard.btnKaryawan.Enabled = False
+            FrmBarang.btnKaryawan.Enabled = False
+            FrmKaryawan.btnKaryawan.Enabled = False
+            FrmUser.btnKaryawan.Enabled = False
 
             Dashboard.btnBarang.Enabled = True
             FrmBarang.btnBarang.Enabled = True
             FrmKaryawan.btnBarang.Enabled = True
             FrmUser.btnBarang.Enabled = True
 
-            Dashboard.btnUser.Enabled = False
-            FrmBarang.btnUser.Enabled = False
-            FrmKaryawan.btnUser.Enabled = False
-            FrmUser.btnUser.Enabled = False
+            Dashboard.btnUser.Enabled = True
+            FrmBarang.btnUser.Enabled = True
+            FrmKaryawan.btnUser.Enabled = True
+            FrmUser.btnUser.Enabled = True
 
             Dashboard.btnLaporan.Enabled = False
             FrmBarang.btnLaporan.Enabled = False

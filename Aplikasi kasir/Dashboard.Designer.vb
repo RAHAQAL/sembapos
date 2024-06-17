@@ -62,7 +62,7 @@ Partial Class Dashboard
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1370, 46)
+        Me.Panel1.Size = New System.Drawing.Size(1366, 46)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
@@ -81,7 +81,7 @@ Partial Class Dashboard
         Me.Panel2.Location = New System.Drawing.Point(0, 46)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(223, 703)
+        Me.Panel2.Size = New System.Drawing.Size(223, 699)
         Me.Panel2.TabIndex = 1
         '
         'btnLaporan
@@ -281,9 +281,9 @@ Partial Class Dashboard
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(29, 52)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(105, 20)
+        Me.Label4.Size = New System.Drawing.Size(104, 20)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Plant for 2024"
+        Me.Label4.Text = "Plant for 2023"
         '
         'Panel7
         '
@@ -388,7 +388,7 @@ Partial Class Dashboard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1366, 745)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Label6)
@@ -404,11 +404,13 @@ Partial Class Dashboard
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimizeBox = False
+        Me.MaximizeBox = False
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "SembaPOS"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

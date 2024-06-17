@@ -63,7 +63,7 @@ Public Class FrmUser
         txtPassword.Enabled = True
         RadioButton1.Enabled = True
         RadioButton2.Enabled = True
-
+        RadioButton3.Enabled = True
     End Sub
 
     Sub aktif2()
@@ -72,6 +72,7 @@ Public Class FrmUser
         txtPassword.Enabled = True
         RadioButton1.Enabled = True
         RadioButton2.Enabled = True
+        RadioButton3.Enabled = True
 
     End Sub
 
@@ -81,7 +82,7 @@ Public Class FrmUser
         txtPassword.Enabled = False
         RadioButton1.Enabled = False
         RadioButton2.Enabled = False
-
+        RadioButton3.Enabled = False
     End Sub
 
     Sub clear()
@@ -90,7 +91,7 @@ Public Class FrmUser
         txtPassword.Clear()
         RadioButton1.Checked = False
         RadioButton2.Checked = False
-
+        RadioButton3.Checked = False
     End Sub
 
 #End Region
@@ -117,7 +118,7 @@ Public Class FrmUser
                 MsgBox("Password masih kosong, silahkan diisi dulu...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Informasi")
                 txtPassword.Focus()
                 Exit Sub
-            ElseIf Not (RadioButton1.Checked Or RadioButton2.Checked) Then
+            ElseIf Not (RadioButton1.Checked Or RadioButton2.Checked Or RadioButton3.Checked) Then
                 MsgBox("Pilih salah satu Role ID terlebih dahulu...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Informasi")
 
                 Exit Sub
@@ -158,6 +159,8 @@ Public Class FrmUser
                     roleid = RadioButton1.Text
                 ElseIf RadioButton2.Checked Then
                     roleid = RadioButton2.Text
+                ElseIf RadioButton3.Checked Then
+                    roleid = RadioButton3.Text
                 End If
 
                 cmd.CommandText = "INSERT INTO Tuser VALUES ('" & Trim(txtKode.Text) & "', '" & Trim(txtNIK.Text) & "', '" & Trim(txtPassword.Text) & "'," & _
@@ -204,33 +207,15 @@ Public Class FrmUser
                     Exit Sub
                 End If
 
-                '' Check if the NIK is not already registered in Tuser
-                'cmd.CommandText = "SELECT COUNT(*) FROM Tuser WHERE nik = '" & txtNIK.Text & "'"
-                'Dim countTuser As Integer = CInt(cmd.ExecuteScalar())
-
-                'If countTuser > 0 Then
-                '    ' NIK is already registered in Tuser
-                '    MessageBox.Show("NIK yang anda masukkan sudah terdaftar sebagai user", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                '    clear()
-                '    kodeuserotomatis()
-                '    FrmUser_Load(Nothing, Nothing)
-                '    aktif2()
-                '    txtNIK.Focus()
-                '    Exit Sub
-                'End If
-
                 ' Continue with the insert operation
                 If RadioButton1.Checked Then
                     roleid = RadioButton1.Text
                 ElseIf RadioButton2.Checked Then
                     roleid = RadioButton2.Text
+                ElseIf RadioButton3.Checked Then
+                    roleid = RadioButton3.Text
                 End If
 
-                If RadioButton1.Checked Then
-                    roleid = RadioButton1.Text
-                ElseIf RadioButton2.Checked Then
-                    roleid = RadioButton2.Text
-                End If
 
 
                 cmd.Connection = koneksi
@@ -280,10 +265,7 @@ Public Class FrmUser
 
         ElseIf btnHapus.Text = "&Batal" Then
 
-            'If String.IsNullOrWhiteSpace(txtKode.Text) OrElse String.IsNullOrWhiteSpace(txtNama.Text) OrElse String.IsNullOrWhiteSpace(txtJK.Text) OrElse String.IsNullOrWhiteSpace(txtTelepon.Text) OrElse String.IsNullOrWhiteSpace(txtAlamat.Text) Then
-
-
-            If txtNIK.Text = "" OrElse txtPassword.Text = "" OrElse Not (RadioButton1.Checked Or RadioButton2.Checked) Then
+            If txtNIK.Text = "" OrElse txtPassword.Text = "" OrElse Not (RadioButton1.Checked Or RadioButton2.Checked Or RadioButton3.Checked) Then
                 MessageBox.Show("Data user yang akan diubah tidak boleh kosong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
             Else
@@ -338,10 +320,8 @@ Public Class FrmUser
     Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
 
 
-        'If String.IsNullOrWhiteSpace(txtKode.Text) OrElse String.IsNullOrWhiteSpace(txtNama.Text) OrElse String.IsNullOrWhiteSpace(txtJK.Text) OrElse String.IsNullOrWhiteSpace(txtTelepon.Text) OrElse String.IsNullOrWhiteSpace(txtAlamat.Text) Then
 
-
-        If txtNIK.Text = "" OrElse txtPassword.Text = "" OrElse Not (RadioButton1.Checked Or RadioButton2.Checked) Then
+        If txtNIK.Text = "" OrElse txtPassword.Text = "" OrElse Not (RadioButton1.Checked Or RadioButton2.Checked Or RadioButton3.Checked) Then
             MessageBox.Show("Data yang akan diubah tidak boleh kosong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
 
@@ -377,22 +357,7 @@ Public Class FrmUser
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
 
-        'If ListView1.SelectedItems.Count > 0 Then
-        '    ' Ambil item yang dipilih dari ListView
-        '    Dim selectedItem As ListViewItem = ListView1.SelectedItems(0)
-
-        '    ' Tampilkan data item yang dipilih di TextBox
-        '    txtKode.Text = selectedItem.SubItems(0).Text
-        '    txtNama.Text = selectedItem.SubItems(1).Text
-        '    txtJK.Text = selectedItem.SubItems(2).Text
-        '    txtTelepon.Text = selectedItem.SubItems(3).Text
-        '    txtAlamat.Text = selectedItem.SubItems(4).Text
-        '    'txtStok.Text = selectedItem.SubItems(5).Text
-
-        '    nonaktif()
-        '    'pilih = True
-        'End If
-
+       
         If ListView1.SelectedItems.Count > 0 Then
             ' Ambil item yang dipilih dari ListView
             Dim selectedItem As ListViewItem = ListView1.SelectedItems(0)
@@ -409,6 +374,8 @@ Public Class FrmUser
                 RadioButton1.Checked = True
             ElseIf selectedValue = "2" Then
                 RadioButton2.Checked = True
+            ElseIf selectedValue = "3" Then
+                RadioButton3.Checked = True
             End If
             nonaktif()
         End If
@@ -454,7 +421,7 @@ Public Class FrmUser
 
 
 
-        If txtNIK.Text = "" OrElse txtPassword.Text = "" OrElse Not (RadioButton1.Checked Or RadioButton2.Checked) Then
+        If txtNIK.Text = "" OrElse txtPassword.Text = "" OrElse Not (RadioButton1.Checked Or RadioButton2.Checked Or RadioButton3.Checked) Then
             MessageBox.Show("Data yang akan dihapus tidak boleh kosong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -513,9 +480,6 @@ Public Class FrmUser
         FrmKaryawan.Show()
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
-        
-    End Sub
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
         'Me.Hide()
@@ -546,12 +510,19 @@ Public Class FrmUser
 
     End Sub
 
-    Private Sub btnLogout_Click_1(sender As Object, e As EventArgs) Handles btnLogout.Click
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         ' Tampilkan kotak dialog konfirmasi
         Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-        ' Jika pengguna memilih Yes, maka tutup form
+        ' Jika pengguna memilih Yes, maka tutup form dan kembali ke form login
         If result = DialogResult.Yes Then
+            ' Buat instance form login jika belum ada
+            Dim loginForm As New LoginForm1()
+
+            ' Tampilkan form login
+            loginForm.Show()
+
+            ' Tutup form saat ini (form utama)
             Me.Close()
         End If
     End Sub

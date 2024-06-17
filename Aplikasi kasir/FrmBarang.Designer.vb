@@ -521,7 +521,7 @@ Partial Class FrmBarang
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(92, 28)
         Me.Button1.TabIndex = 49
-        Me.Button1.Text = "Simpan"
+        Me.Button1.Text = "Tambah"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'nudQty
@@ -608,10 +608,13 @@ Partial Class FrmBarang
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label7)
         Me.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "FrmBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "SembaPOS"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()

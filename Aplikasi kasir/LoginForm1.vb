@@ -135,18 +135,16 @@ Public Class LoginForm1
 
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         opendb()
+        Me.AcceptButton = OK
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then
-            txtPassword.UseSystemPasswordChar = True
-        Else
             txtPassword.UseSystemPasswordChar = False
+        Else
+            txtPassword.UseSystemPasswordChar = True
         End If
     End Sub
-
-
-
 
 
 
@@ -206,4 +204,6 @@ Public Class LoginForm1
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
     End Sub
+
+
 End Class

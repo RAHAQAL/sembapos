@@ -355,59 +355,6 @@ Public Class FrmKaryawan
 
     End Sub
 
-    'Private Sub txtNik_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNik.KeyPress
-    '    If e.KeyChar = Chr(13) Then
-    '        cmd.Connection = koneksi
-    '        cmd.CommandText = "SELECT * FROM TKaryawan WHERE nik = '" & txtNik.Text & "'"
-    '        rdr = cmd.ExecuteReader
-
-    '        rdr.Read()
-    '        If rdr.HasRows = True Then
-    '            txtNama.Text = rdr(1)
-    '            txtJabatan.Text = rdr(2)
-    '            txtTelp.Text = rdr(3)
-    '            txtAlamat.Text = rdr(4)
-    '        Else
-    '            txtNama.Text = ""
-    '            txtJabatan.Clear()
-    '            txtTelp.Text = ""
-    '            txtAlamat.Clear()
-
-    '        End If
-    '        cmd.Dispose()
-    '        rdr.Close()
-    '        txtNama.Focus()
-    '    End If
-    'End Sub
-
-    'Private Sub txtNik_TextChanged(sender As Object, e As EventArgs) Handles txtNik.TextChanged
-    '    If rdr IsNot Nothing AndAlso Not rdr.IsClosed Then
-    '        rdr.Close()
-    '    End If
-    '    cmd.Dispose()
-    '    cmd.Connection = koneksi
-    '    cmd.CommandText = "SELECT * FROM TKaryawan WHERE nik like '" & txtNik.Text & "%'"
-    '    rdr = cmd.ExecuteReader
-    '    ListView1.Items.Clear()
-
-
-
-    '    Do While rdr.Read()
-    '        Dim lv As ListViewItem
-    '        lv = ListView1.Items.Add(rdr(0))
-    '        lv.SubItems.Add(rdr(1))
-    '        lv.SubItems.Add(rdr(2))
-    '        lv.SubItems.Add(rdr(3))
-    '        lv.SubItems.Add(rdr(4))
-
-    '    Loop
-    '    If rdr IsNot Nothing AndAlso Not rdr.IsClosed Then
-    '        cmd.Dispose()
-    '        rdr.Close()
-    '    End If
-
-    'End Sub
-
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
 
         If String.IsNullOrWhiteSpace(txtNik.Text) OrElse String.IsNullOrWhiteSpace(txtNama.Text) OrElse String.IsNullOrWhiteSpace(txtJabatan.Text) OrElse String.IsNullOrWhiteSpace(txtTelp.Text) OrElse String.IsNullOrWhiteSpace(txtAlamat.Text) Then
@@ -508,8 +455,15 @@ Public Class FrmKaryawan
         ' Tampilkan kotak dialog konfirmasi
         Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-        ' Jika pengguna memilih Yes, maka tutup form
+        ' Jika pengguna memilih Yes, maka tutup form dan kembali ke form login
         If result = DialogResult.Yes Then
+            ' Buat instance form login jika belum ada
+            Dim loginForm As New LoginForm1()
+
+            ' Tampilkan form login
+            loginForm.Show()
+
+            ' Tutup form saat ini (form utama)
             Me.Close()
         End If
     End Sub

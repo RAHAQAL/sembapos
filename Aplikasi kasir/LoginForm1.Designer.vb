@@ -29,7 +29,6 @@ Partial Class LoginForm1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtuser = New System.Windows.Forms.TextBox()
@@ -37,6 +36,7 @@ Partial Class LoginForm1
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -129,19 +129,6 @@ Partial Class LoginForm1
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Masukkan password"
         '
-        'txtPassword
-        '
-        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.ForeColor = System.Drawing.Color.Black
-        Me.txtPassword.Location = New System.Drawing.Point(11, 8)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtPassword.Multiline = True
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(233, 18)
-        Me.txtPassword.TabIndex = 19
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
@@ -175,9 +162,8 @@ Partial Class LoginForm1
         Me.txtuser.ForeColor = System.Drawing.Color.Black
         Me.txtuser.Location = New System.Drawing.Point(11, 8)
         Me.txtuser.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtuser.Multiline = True
         Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(233, 18)
+        Me.txtuser.Size = New System.Drawing.Size(233, 16)
         Me.txtuser.TabIndex = 19
         '
         'Label2
@@ -227,6 +213,18 @@ Partial Class LoginForm1
         Me.Label1.Size = New System.Drawing.Size(161, 21)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Aplikasi Point of Sale"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.ForeColor = System.Drawing.Color.Black
+        Me.txtPassword.Location = New System.Drawing.Point(11, 8)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(233, 16)
+        Me.txtPassword.TabIndex = 19
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'LoginForm1
         '

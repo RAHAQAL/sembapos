@@ -43,12 +43,19 @@ Public Class Dashboard
         ' Tampilkan kotak dialog konfirmasi
         Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-        ' Jika pengguna memilih Yes, maka tutup form
+        ' Jika pengguna memilih Yes, maka tutup form dan kembali ke form login
         If result = DialogResult.Yes Then
-            Me.Close()
+            ' Buat instance form login jika belum ada
+            Dim loginForm As New LoginForm1()
 
+            ' Tampilkan form login
+            loginForm.Show()
+
+            ' Tutup form saat ini (form utama)
+            Me.Close()
         End If
     End Sub
+
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
         ListPenjualan.Show()
