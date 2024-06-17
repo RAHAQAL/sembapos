@@ -100,3 +100,39 @@ from TBarang join inserted TDetailJual on TBarang.id_barang=TDetailJual.id_baran
 --from TBarang join inserted TDetailJual on TBarang.id_barang=TDetailJual.id_barang
 
 drop trigger KurangStokBarang
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select sum(total_bayar) as penjualan, MONTH(tanggal) as bulan 
+from TJual 
+where YEAR(tanggal) = YEAR(GETDATE()) 
+group by MONTH(tanggal);
+
+SELECT TOP 3
+    b.nama_barang AS Nama_Barang,
+    SUM(dj.jumlah) AS Total_Terjual
+FROM
+    TDetailJual dj
+INNER JOIN
+    TBarang b ON b.id_barang = dj.id_barang
+GROUP BY
+    b.nama_barang
+ORDER BY
+    Total_Terjual DESC;
+
+
+

@@ -91,6 +91,28 @@ Public Class FrmBarang
         txtStok.Clear()
     End Sub
 
+    Sub ChartTop3()
+
+        Dim cmd As New SqlCommand()
+        cmd.Connection = koneksi
+
+        ' Adapt the query based on your database system
+        cmd.CommandText = "SELECT TOP 3 b.nama_barang AS Nama_Barang, SUM(dj.jumlah) AS Total_Terjual " & _
+                           "FROM TDetailJual dj " & _
+                           "INNER JOIN TBarang b ON b.id_barang = dj.id_barang " & _
+                           "GROUP BY b.nama_barang " & _
+                           "ORDER BY Total_Terjual DESC"
+
+        Dim rdr As SqlDataReader = cmd.ExecuteReader()
+
+        ' Populate your chart with retrieved data
+        While rdr.Read()
+            Top3.Series("Produk").Points.AddXY(rdr.Item("Nama_Barang"), rdr.Item("Total_Terjual"))
+        End While
+        cmd.Dispose()
+        rdr.Close()
+    End Sub
+
 #End Region
 
 
@@ -98,6 +120,7 @@ Public Class FrmBarang
     Private Sub FrmBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateMenuBasedOnRole()
         opendb()
+        ChartTop3()
         listdata()
         Label7.Text = "Hi, " & loggedInUserName & "!"
     End Sub
