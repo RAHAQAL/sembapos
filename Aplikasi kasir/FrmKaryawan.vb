@@ -96,7 +96,7 @@ Public Class FrmKaryawan
         UpdateMenuBasedOnRole()
         opendb()
         listdata()
-
+        Label1.Text = "Hi, " & loggedInUserName & "!"
 
     End Sub
 

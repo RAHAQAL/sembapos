@@ -26,7 +26,7 @@ Module POS
 
 
     Public Sub opendb()
-        sql = "Data Source=LAB1PC14; Initial Catalog=SembaPOS;Integrated Security =True;"
+        sql = "Data Source=LAPTOP-SPGTEK6N; Initial Catalog=SembaPOS;Integrated Security =True;"
         koneksi = New SqlConnection(sql)
 
         Try

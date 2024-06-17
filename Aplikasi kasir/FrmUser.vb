@@ -486,6 +486,7 @@ Public Class FrmUser
     Private Sub FrmUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         opendb()
         listdata()
+        Label6.Text = "Hi, " & loggedInUserName & "!"
         UpdateMenuBasedOnRole()
     End Sub
 

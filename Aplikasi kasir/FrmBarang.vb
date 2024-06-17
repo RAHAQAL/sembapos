@@ -99,7 +99,7 @@ Public Class FrmBarang
         UpdateMenuBasedOnRole()
         opendb()
         listdata()
-
+        Label7.Text = "Hi, " & loggedInUserName & "!"
     End Sub
 
 
@@ -426,59 +426,6 @@ Public Class FrmBarang
 
     End Sub
 
-
-
-
-
-
-
-    Private Sub txtHBeli_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub txtKode_TextChanged(sender As Object, e As EventArgs) Handles txtKode.TextChanged
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
-    Private Sub txtNama_TextChanged(sender As Object, e As EventArgs) Handles txtNama.TextChanged
-
-    End Sub
-
-    Private Sub txtHJual_TextChanged(sender As Object, e As EventArgs) Handles txtHJual.TextChanged
-
-    End Sub
-
-    Private Sub txtSatuan_TextChanged(sender As Object, e As EventArgs) Handles txtSatuan.TextChanged
-
-    End Sub
-
-    Private Sub txtStok_TextChanged(sender As Object, e As EventArgs) Handles txtStok.TextChanged
-
-    End Sub
-
-    Private Sub btnDashboard_Click(sender As Object, e As EventArgs)
-        
-    End Sub
 
     Private Sub btnPenjualan_Click(sender As Object, e As EventArgs)
         Me.Hide()

@@ -25,6 +25,7 @@ Partial Class Dashboard
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnLaporan = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnUser = New System.Windows.Forms.Button()
@@ -47,7 +48,6 @@ Partial Class Dashboard
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.btnLaporan = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,8 +84,27 @@ Partial Class Dashboard
         Me.Panel2.Size = New System.Drawing.Size(223, 703)
         Me.Panel2.TabIndex = 1
         '
+        'btnLaporan
+        '
+        Me.btnLaporan.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLaporan.FlatAppearance.BorderSize = 0
+        Me.btnLaporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLaporan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLaporan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnLaporan.Image = CType(resources.GetObject("btnLaporan.Image"), System.Drawing.Image)
+        Me.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLaporan.Location = New System.Drawing.Point(45, 227)
+        Me.btnLaporan.Name = "btnLaporan"
+        Me.btnLaporan.Size = New System.Drawing.Size(132, 32)
+        Me.btnLaporan.TabIndex = 7
+        Me.btnLaporan.Text = "   Laporan"
+        Me.btnLaporan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnLaporan.UseVisualStyleBackColor = True
+        '
         'btnLogout
         '
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -114,6 +133,7 @@ Partial Class Dashboard
         '
         'btnUser
         '
+        Me.btnUser.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUser.FlatAppearance.BorderSize = 0
         Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -131,6 +151,7 @@ Partial Class Dashboard
         '
         'btnKaryawan
         '
+        Me.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnKaryawan.FlatAppearance.BorderSize = 0
         Me.btnKaryawan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -148,6 +169,7 @@ Partial Class Dashboard
         '
         'btnBarang
         '
+        Me.btnBarang.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBarang.FlatAppearance.BorderSize = 0
         Me.btnBarang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -165,6 +187,7 @@ Partial Class Dashboard
         '
         'btnPenjualan
         '
+        Me.btnPenjualan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPenjualan.FlatAppearance.BorderSize = 0
         Me.btnPenjualan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -183,6 +206,7 @@ Partial Class Dashboard
         'btnDashboard
         '
         Me.btnDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.FlatAppearance.BorderSize = 0
         Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -358,23 +382,6 @@ Partial Class Dashboard
         Me.PictureBox2.Size = New System.Drawing.Size(42, 37)
         Me.PictureBox2.TabIndex = 22
         Me.PictureBox2.TabStop = False
-        '
-        'btnLaporan
-        '
-        Me.btnLaporan.FlatAppearance.BorderSize = 0
-        Me.btnLaporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLaporan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLaporan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.btnLaporan.Image = CType(resources.GetObject("btnLaporan.Image"), System.Drawing.Image)
-        Me.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLaporan.Location = New System.Drawing.Point(45, 227)
-        Me.btnLaporan.Name = "btnLaporan"
-        Me.btnLaporan.Size = New System.Drawing.Size(132, 32)
-        Me.btnLaporan.TabIndex = 7
-        Me.btnLaporan.Text = "   Laporan"
-        Me.btnLaporan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnLaporan.UseVisualStyleBackColor = True
         '
         'Dashboard
         '

@@ -475,6 +475,7 @@ Partial Class FSales
         '
         'btnLaporan
         '
+        Me.btnLaporan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLaporan.FlatAppearance.BorderSize = 0
         Me.btnLaporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -492,6 +493,7 @@ Partial Class FSales
         '
         'btnLogout
         '
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -520,6 +522,7 @@ Partial Class FSales
         '
         'btnUser
         '
+        Me.btnUser.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUser.FlatAppearance.BorderSize = 0
         Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -537,6 +540,7 @@ Partial Class FSales
         '
         'btnKaryawan
         '
+        Me.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnKaryawan.FlatAppearance.BorderSize = 0
         Me.btnKaryawan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -554,6 +558,7 @@ Partial Class FSales
         '
         'btnBarang
         '
+        Me.btnBarang.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBarang.FlatAppearance.BorderSize = 0
         Me.btnBarang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -572,6 +577,7 @@ Partial Class FSales
         'btnPenjualan
         '
         Me.btnPenjualan.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnPenjualan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPenjualan.FlatAppearance.BorderSize = 0
         Me.btnPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPenjualan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -588,6 +594,7 @@ Partial Class FSales
         '
         'btnDashboard
         '
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.FlatAppearance.BorderSize = 0
         Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat

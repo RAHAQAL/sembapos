@@ -81,6 +81,7 @@ Public Class FSales
         dtpTanggal.CustomFormat = "yyyy/MM/dd"
         opendb()
         txtKasir.Text = loggedInUserName
+        Label12.Text = "Hi, " & loggedInUserName & "!"
         nomorfakturotomatis()
     End Sub
 
@@ -519,6 +520,10 @@ Public Class FSales
     End Sub
 
     Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
+
+    End Sub
+
+    Private Sub txtKasir_TextChanged(sender As Object, e As EventArgs) Handles txtKasir.TextChanged
 
     End Sub
 End Class

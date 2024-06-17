@@ -175,7 +175,7 @@ Partial Class FrmBarang
         'txtHJual
         '
         Me.txtHJual.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHJual.Location = New System.Drawing.Point(60, 121)
+        Me.txtHJual.Location = New System.Drawing.Point(60, 188)
         Me.txtHJual.Margin = New System.Windows.Forms.Padding(2)
         Me.txtHJual.Name = "txtHJual"
         Me.txtHJual.Size = New System.Drawing.Size(145, 25)
@@ -184,7 +184,7 @@ Partial Class FrmBarang
         'txtNama
         '
         Me.txtNama.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNama.Location = New System.Drawing.Point(60, 184)
+        Me.txtNama.Location = New System.Drawing.Point(60, 123)
         Me.txtNama.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNama.Name = "txtNama"
         Me.txtNama.Size = New System.Drawing.Size(145, 25)
@@ -219,7 +219,7 @@ Partial Class FrmBarang
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(57, 101)
+        Me.Label4.Location = New System.Drawing.Point(57, 168)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 17)
@@ -231,7 +231,7 @@ Partial Class FrmBarang
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(57, 164)
+        Me.Label2.Location = New System.Drawing.Point(57, 103)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 17)
@@ -318,6 +318,7 @@ Partial Class FrmBarang
         '
         'btnLaporan
         '
+        Me.btnLaporan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLaporan.FlatAppearance.BorderSize = 0
         Me.btnLaporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -335,6 +336,7 @@ Partial Class FrmBarang
         '
         'btnLogout
         '
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -363,6 +365,7 @@ Partial Class FrmBarang
         '
         'btnUser
         '
+        Me.btnUser.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUser.FlatAppearance.BorderSize = 0
         Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -380,6 +383,7 @@ Partial Class FrmBarang
         '
         'btnKaryawan
         '
+        Me.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnKaryawan.FlatAppearance.BorderSize = 0
         Me.btnKaryawan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -398,6 +402,7 @@ Partial Class FrmBarang
         'btnBarang
         '
         Me.btnBarang.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnBarang.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBarang.FlatAppearance.BorderSize = 0
         Me.btnBarang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -415,6 +420,7 @@ Partial Class FrmBarang
         '
         'btnPenjualan
         '
+        Me.btnPenjualan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPenjualan.FlatAppearance.BorderSize = 0
         Me.btnPenjualan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -432,6 +438,7 @@ Partial Class FrmBarang
         '
         'btnDashboard
         '
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.FlatAppearance.BorderSize = 0
         Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat

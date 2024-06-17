@@ -47,7 +47,6 @@ Partial Class FrmKaryawan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLaporan = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -56,6 +55,7 @@ Partial Class FrmKaryawan
         Me.btnBarang = New System.Windows.Forms.Button()
         Me.btnPenjualan = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -327,19 +327,9 @@ Partial Class FrmKaryawan
         Me.Panel2.Size = New System.Drawing.Size(223, 703)
         Me.Panel2.TabIndex = 32
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1370, 46)
-        Me.Panel1.TabIndex = 31
-        '
         'btnLaporan
         '
+        Me.btnLaporan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLaporan.FlatAppearance.BorderSize = 0
         Me.btnLaporan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -357,6 +347,7 @@ Partial Class FrmKaryawan
         '
         'btnLogout
         '
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -385,6 +376,7 @@ Partial Class FrmKaryawan
         '
         'btnUser
         '
+        Me.btnUser.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUser.FlatAppearance.BorderSize = 0
         Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -403,6 +395,7 @@ Partial Class FrmKaryawan
         'btnKaryawan
         '
         Me.btnKaryawan.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnKaryawan.FlatAppearance.BorderSize = 0
         Me.btnKaryawan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -420,6 +413,7 @@ Partial Class FrmKaryawan
         '
         'btnBarang
         '
+        Me.btnBarang.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBarang.FlatAppearance.BorderSize = 0
         Me.btnBarang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -437,6 +431,7 @@ Partial Class FrmKaryawan
         '
         'btnPenjualan
         '
+        Me.btnPenjualan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPenjualan.FlatAppearance.BorderSize = 0
         Me.btnPenjualan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -454,6 +449,7 @@ Partial Class FrmKaryawan
         '
         'btnDashboard
         '
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.FlatAppearance.BorderSize = 0
         Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -467,6 +463,17 @@ Partial Class FrmKaryawan
         Me.btnDashboard.Text = "   Dashboard"
         Me.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnDashboard.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1370, 46)
+        Me.Panel1.TabIndex = 31
         '
         'Panel3
         '
