@@ -42,11 +42,16 @@ Partial Class Dashboard
         Me.btnPenjualan = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.ChartJB = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Top3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -54,9 +59,6 @@ Partial Class Dashboard
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -65,22 +67,20 @@ Partial Class Dashboard
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.ChartJB = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Top3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        CType(Me.ChartJB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
+        CType(Me.Top3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartJB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Top3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -263,6 +263,38 @@ Partial Class Dashboard
         Me.Panel3.Size = New System.Drawing.Size(214, 159)
         Me.Panel3.TabIndex = 2
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label8.Location = New System.Drawing.Point(19, 118)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(85, 17)
+        Me.Label8.TabIndex = 2
+        Me.Label8.Text = "Total Produk"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(15, 79)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(51, 40)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "12"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(22, 21)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(52, 50)
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
+        '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer))
@@ -308,6 +340,39 @@ Partial Class Dashboard
         Me.Panel7.Size = New System.Drawing.Size(702, 332)
         Me.Panel7.TabIndex = 3
         '
+        'ChartJB
+        '
+        Me.ChartJB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        ChartArea1.AxisX.MajorGrid.Enabled = False
+        ChartArea1.AxisX.Title = "Bulan"
+        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisY.MajorGrid.Enabled = False
+        ChartArea1.AxisY.Title = "Total Penjualan"
+        ChartArea1.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartJB.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartJB.Legends.Add(Legend1)
+        Me.ChartJB.Location = New System.Drawing.Point(0, 15)
+        Me.ChartJB.Name = "ChartJB"
+        Me.ChartJB.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Me.ChartJB.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsValueShownAsLabel = True
+        Series1.Legend = "Legend1"
+        Series1.Name = "Penjualan"
+        Me.ChartJB.Series.Add(Series1)
+        Me.ChartJB.Size = New System.Drawing.Size(699, 314)
+        Me.ChartJB.TabIndex = 0
+        Me.ChartJB.Text = "Penjualan"
+        Title1.BackColor = System.Drawing.Color.White
+        Title1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title1.Name = "JumlahPenjualan"
+        Title1.Text = "Grafik Penjualan"
+        Me.ChartJB.Titles.Add(Title1)
+        '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.White
@@ -318,6 +383,37 @@ Partial Class Dashboard
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(316, 332)
         Me.Panel8.TabIndex = 4
+        '
+        'Top3
+        '
+        ChartArea2.AxisX.MajorGrid.Enabled = False
+        ChartArea2.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea2.AxisY.MajorGrid.Enabled = False
+        ChartArea2.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea2.Name = "ChartArea1"
+        Me.Top3.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Top3.Legends.Add(Legend2)
+        Me.Top3.Location = New System.Drawing.Point(0, 15)
+        Me.Top3.Name = "Top3"
+        Me.Top3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Me.Top3.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
+        Series2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series2.IsValueShownAsLabel = True
+        Series2.LabelForeColor = System.Drawing.Color.White
+        Series2.Legend = "Legend1"
+        Series2.Name = "Produk"
+        Series2.YValuesPerPoint = 4
+        Me.Top3.Series.Add(Series2)
+        Me.Top3.Size = New System.Drawing.Size(313, 314)
+        Me.Top3.TabIndex = 0
+        Me.Top3.Text = "Produk Terlaris"
+        Title2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title2.Name = "ProdukTerlaris"
+        Title2.Text = "Produk Terlaris"
+        Me.Top3.Titles.Add(Title2)
         '
         'Label1
         '
@@ -396,38 +492,6 @@ Partial Class Dashboard
         Me.PictureBox2.Size = New System.Drawing.Size(42, 37)
         Me.PictureBox2.TabIndex = 22
         Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(22, 21)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(52, 50)
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(15, 79)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 40)
-        Me.Label7.TabIndex = 1
-        Me.Label7.Text = "12"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label8.Location = New System.Drawing.Point(19, 118)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(85, 17)
-        Me.Label8.TabIndex = 2
-        Me.Label8.Text = "Total Produk"
         '
         'Panel4
         '
@@ -519,70 +583,6 @@ Partial Class Dashboard
         Me.PictureBox5.TabIndex = 0
         Me.PictureBox5.TabStop = False
         '
-        'ChartJB
-        '
-        Me.ChartJB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        ChartArea1.AxisX.MajorGrid.Enabled = False
-        ChartArea1.AxisX.Title = "Bulan"
-        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.AxisY.MajorGrid.Enabled = False
-        ChartArea1.AxisY.Title = "Total Penjualan"
-        ChartArea1.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartJB.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartJB.Legends.Add(Legend1)
-        Me.ChartJB.Location = New System.Drawing.Point(0, 15)
-        Me.ChartJB.Name = "ChartJB"
-        Me.ChartJB.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Me.ChartJB.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.IsValueShownAsLabel = True
-        Series1.Legend = "Legend1"
-        Series1.Name = "Penjualan"
-        Me.ChartJB.Series.Add(Series1)
-        Me.ChartJB.Size = New System.Drawing.Size(699, 314)
-        Me.ChartJB.TabIndex = 0
-        Me.ChartJB.Text = "Penjualan"
-        Title1.BackColor = System.Drawing.Color.White
-        Title1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title1.Name = "JumlahPenjualan"
-        Title1.Text = "Grafik Penjualan"
-        Me.ChartJB.Titles.Add(Title1)
-        '
-        'Top3
-        '
-        ChartArea2.AxisX.MajorGrid.Enabled = False
-        ChartArea2.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea2.AxisY.MajorGrid.Enabled = False
-        ChartArea2.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea2.Name = "ChartArea1"
-        Me.Top3.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Top3.Legends.Add(Legend2)
-        Me.Top3.Location = New System.Drawing.Point(0, 15)
-        Me.Top3.Name = "Top3"
-        Me.Top3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Me.Top3.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
-        Series2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series2.IsValueShownAsLabel = True
-        Series2.LabelForeColor = System.Drawing.Color.White
-        Series2.Legend = "Legend1"
-        Series2.Name = "Produk"
-        Series2.YValuesPerPoint = 4
-        Me.Top3.Series.Add(Series2)
-        Me.Top3.Size = New System.Drawing.Size(313, 314)
-        Me.Top3.TabIndex = 0
-        Me.Top3.Text = "Produk Terlaris"
-        Title2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title2.Name = "ProdukTerlaris"
-        Title2.Text = "Produk Terlaris"
-        Me.Top3.Titles.Add(Title2)
-        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -616,21 +616,21 @@ Partial Class Dashboard
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
+        CType(Me.ChartJB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
+        CType(Me.Top3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartJB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Top3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

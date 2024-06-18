@@ -17,6 +17,14 @@ Public Class FrmUser
         txtKode.Focus()
     End Sub
 
+    Sub HitungKaryawanBelumPunyaUser()
+        Dim query As String = "SELECT COUNT(*) FROM TKaryawan WHERE nik NOT IN (SELECT nik FROM Tuser)"
+        cmd.CommandText = query
+        Dim count As Integer = CInt(cmd.ExecuteScalar())
+
+        Label10.Text = count.ToString()
+    End Sub
+
     Sub kodeuserotomatis()
         cmd = New SqlCommand("SELECT * FROM Tuser ORDER BY id_user DESC", koneksi)
         rdr = cmd.ExecuteReader
@@ -455,6 +463,15 @@ Public Class FrmUser
         listdata()
         Label6.Text = "Hi, " & loggedInUserName & "!"
         UpdateMenuBasedOnRole()
+        HitungKaryawanBelumPunyaUser()
+
+        'SetPanelOpacity(Panel7, 220)
+        'SetPanelOpacity(Panel8, 220)
+        'SetPanelOpacity(Panel9, 220)
+    End Sub
+
+    Private Sub SetPanelOpacity(panel As Panel, opacity As Integer)
+        panel.BackColor = Color.FromArgb(opacity, panel.BackColor)
     End Sub
 
     Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
@@ -525,5 +542,13 @@ Public Class FrmUser
             ' Tutup form saat ini (form utama)
             Me.Close()
         End If
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

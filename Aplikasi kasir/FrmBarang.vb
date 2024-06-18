@@ -1,7 +1,10 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports System.Drawing.Printing
 
 Public Class FrmBarang
+
+    Private chartInitialized As Boolean = False
 
 #Region "SUB"
 
@@ -91,8 +94,7 @@ Public Class FrmBarang
         txtStok.Clear()
     End Sub
 
-    Sub ChartTop3()
-
+    Private Sub ChartTop3()
         Dim cmd As New SqlCommand()
         cmd.Connection = koneksi
 
@@ -105,10 +107,14 @@ Public Class FrmBarang
 
         Dim rdr As SqlDataReader = cmd.ExecuteReader()
 
+        ' Bersihkan data di chart sebelum menambahkan data baru
+        Top3.Series("Produk").Points.Clear()
+
         ' Populate your chart with retrieved data
         While rdr.Read()
             Top3.Series("Produk").Points.AddXY(rdr.Item("Nama_Barang"), rdr.Item("Total_Terjual"))
         End While
+
         cmd.Dispose()
         rdr.Close()
     End Sub
@@ -120,7 +126,13 @@ Public Class FrmBarang
     Private Sub FrmBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateMenuBasedOnRole()
         opendb()
-        ChartTop3()
+
+        ' Panggil ChartTop3() hanya jika belum dipanggil sebelumnya
+        If Not chartInitialized Then
+            ChartTop3()
+            chartInitialized = True
+        End If
+
         listdata()
         Label7.Text = "Hi, " & loggedInUserName & "!"
     End Sub
@@ -182,6 +194,7 @@ Public Class FrmBarang
                     clear()
                     btnTambah_Click(Nothing, Nothing)
                     FrmBarang_Load(Nothing, Nothing)
+                    ChartTop3()
                     txtKode.Focus()
                     Exit Sub
 
@@ -223,7 +236,7 @@ Public Class FrmBarang
                     MessageBox.Show("Data barang telah diubah", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
-
+                    ChartTop3()
                 Else
 
                 End If
@@ -272,7 +285,7 @@ Public Class FrmBarang
                     : cmd.ExecuteNonQuery()
                     cmd.Dispose()
                     MessageBox.Show("Data barang telah dihapus", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+                    ChartTop3()
                 Else
 
 
@@ -465,7 +478,7 @@ Public Class FrmBarang
         FrmUser.Show()
     End Sub
 
-  
+
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
         'Me.Hide()
@@ -542,22 +555,75 @@ Public Class FrmBarang
                 Exit Sub
             End If
 
-            ' Jika id_barang ditemukan dalam database, lanjutkan dengan menambahkan stok
-            Dim queryUpdateStok As String = "UPDATE TBarang SET stok = stok + @qty WHERE LEFT(id_barang, 5) = @karakter"
-            cmd.CommandText = queryUpdateStok
-            cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(nudQty.Value))
-            cmd.Parameters.AddWithValue("@karakter", karakter)
-            cmd.ExecuteNonQuery()
+            ' Konfirmasi sebelum melakukan update stok
+            Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin menambah stok barang tersebut?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-            MsgBox("Stok barang berhasil diperbarui", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Informasi")
-            txtBarang.Clear()
-            nudQty.Value = 0
-            FrmBarang_Load(Nothing, Nothing)
+            If result = DialogResult.Yes Then
+                ' Jika id_barang ditemukan dalam database, lanjutkan dengan menambahkan stok
+                Dim queryUpdateStok As String = "UPDATE TBarang SET stok = stok + @qty WHERE LEFT(id_barang, 5) = @karakter"
+                cmd.CommandText = queryUpdateStok
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(nudQty.Value))
+                cmd.Parameters.AddWithValue("@karakter", karakter)
+                cmd.ExecuteNonQuery()
+
+                MsgBox("Stok barang berhasil diperbarui", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Informasi")
+                txtBarang.Clear()
+                nudQty.Value = 0
+                FrmBarang_Load(Nothing, Nothing)
+            End If
         End If
     End Sub
 
-    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
 
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
     End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim fontRegular As New Font("Arial", 10)
+        Dim fontBold As New Font("Arial", 10, FontStyle.Bold)
+        Dim fontTitle As New Font("Arial", 14, FontStyle.Bold)
+        Dim brush As New SolidBrush(Color.Black)
+        Dim yPos As Integer = 20
+        Dim leftMargin As Integer = e.MarginBounds.Left
+        Dim rightMargin As Integer = e.MarginBounds.Right
+
+        ' Header Laporan
+        e.Graphics.DrawString("Laporan Inventaris Toko SembaPAS", fontTitle, brush, leftMargin, yPos)
+        yPos += 30
+        e.Graphics.DrawString("Jln. Rancapetir No. 6 Ciamis", fontRegular, brush, leftMargin, yPos)
+        yPos += 20
+        e.Graphics.DrawString("Tanggal: " & DateTime.Now.ToString("yyyy/MM/dd"), fontRegular, brush, leftMargin, yPos)
+        yPos += 30
+
+        ' Kolom ListView
+        Dim columnSpacing As Integer = 120 ' jarak antar kolom
+        e.Graphics.DrawString("Kode Barang", fontBold, brush, leftMargin, yPos)
+        e.Graphics.DrawString("Nama Barang", fontBold, brush, leftMargin + columnSpacing, yPos)
+        e.Graphics.DrawString("Harga", fontBold, brush, leftMargin + 2 * columnSpacing, yPos)
+        e.Graphics.DrawString("Satuan", fontBold, brush, leftMargin + 3 * columnSpacing, yPos)
+        e.Graphics.DrawString("Stok", fontBold, brush, leftMargin + 4 * columnSpacing, yPos)
+        yPos += 20
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
+        yPos += 10
+
+        ' Isi ListView
+
+        For Each item As ListViewItem In ListView1.Items
+            e.Graphics.DrawString(item.SubItems(0).Text, fontRegular, brush, leftMargin, yPos)
+            e.Graphics.DrawString(item.SubItems(1).Text, fontRegular, brush, leftMargin + columnSpacing, yPos)
+            e.Graphics.DrawString(FormatCurrency(item.SubItems(2).Text), fontRegular, brush, leftMargin + 2 * columnSpacing, yPos)
+            e.Graphics.DrawString(item.SubItems(3).Text, fontRegular, brush, leftMargin + 3 * columnSpacing, yPos)
+            e.Graphics.DrawString(item.SubItems(4).Text, fontRegular, brush, leftMargin + 4 * columnSpacing, yPos)
+            yPos += 20
+
+        Next
+
+        ' Tambahkan garis pemisah sebelum total
+        yPos += 10
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
+    End Sub
+
 End Class

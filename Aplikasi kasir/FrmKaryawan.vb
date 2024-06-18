@@ -1,5 +1,7 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports System.Drawing.Printing
+
 Public Class FrmKaryawan
 
 #Region "SUB"
@@ -89,16 +91,27 @@ Public Class FrmKaryawan
         cmd.Dispose()
     End Sub
 
+    Sub HitungTotalKaryawan()
+        Try
+            cmd = New SqlCommand("SELECT COUNT(*) FROM TKaryawan", koneksi)
+            Dim jumlahKaryawan As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            Label10.Text = jumlahKaryawan
+        Catch ex As Exception
+            MessageBox.Show("Terjadi kesalahan saat menghitung jumlah karyawan: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
 #End Region
 
     Private Sub FrmKaryawan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateMenuBasedOnRole()
         opendb()
+        HitungTotalKaryawan()
         listdata()
         Label1.Text = "Hi, " & loggedInUserName & "!"
 
     End Sub
+
 
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
@@ -424,7 +437,7 @@ Public Class FrmKaryawan
     End Sub
 
 
-    
+
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
         'Me.Hide()
@@ -466,5 +479,59 @@ Public Class FrmKaryawan
             ' Tutup form saat ini (form utama)
             Me.Close()
         End If
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim fontRegular As New Font("Arial", 10)
+        Dim fontBold As New Font("Arial", 10, FontStyle.Bold)
+        Dim fontTitle As New Font("Arial", 14, FontStyle.Bold)
+        Dim brush As New SolidBrush(Color.Black)
+        Dim yPos As Integer = 20
+        Dim leftMargin As Integer = e.MarginBounds.Left
+        Dim rightMargin As Integer = e.MarginBounds.Right
+
+        ' Header Laporan
+        e.Graphics.DrawString("Laporan Data Karyawan Toko SembaPAS", fontTitle, brush, leftMargin, yPos)
+        yPos += 30
+        e.Graphics.DrawString("Jln. Rancapetir No. 6 Ciamis", fontRegular, brush, leftMargin, yPos)
+        yPos += 20
+        e.Graphics.DrawString("Tanggal: " & DateTime.Now.ToString("yyyy/MM/dd"), fontRegular, brush, leftMargin, yPos)
+        yPos += 30
+
+        ' Kolom ListView
+        Dim columnSpacing As Integer = 120 ' jarak antar kolom
+        e.Graphics.DrawString("Nomor Induk", fontBold, brush, leftMargin, yPos)
+        e.Graphics.DrawString("Nama", fontBold, brush, leftMargin + columnSpacing, yPos)
+        e.Graphics.DrawString("Jabatan", fontBold, brush, leftMargin + 2 * columnSpacing, yPos)
+        e.Graphics.DrawString("Telepon", fontBold, brush, leftMargin + 3 * columnSpacing, yPos)
+        e.Graphics.DrawString("Alamat", fontBold, brush, leftMargin + 4 * columnSpacing, yPos)
+        yPos += 20
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
+        yPos += 10
+
+        ' Isi ListView
+
+        For Each item As ListViewItem In ListView1.Items
+            e.Graphics.DrawString(item.SubItems(0).Text, fontRegular, brush, leftMargin, yPos)
+            e.Graphics.DrawString(item.SubItems(1).Text, fontRegular, brush, leftMargin + columnSpacing, yPos)
+            e.Graphics.DrawString(item.SubItems(2).Text, fontRegular, brush, leftMargin + 2 * columnSpacing, yPos)
+            e.Graphics.DrawString(item.SubItems(3).Text, fontRegular, brush, leftMargin + 3 * columnSpacing, yPos)
+            e.Graphics.DrawString(item.SubItems(4).Text, fontRegular, brush, leftMargin + 4 * columnSpacing, yPos)
+            yPos += 20
+
+        Next
+
+        ' Tambahkan garis pemisah sebelum total
+        yPos += 10
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, rightMargin, yPos)
     End Sub
 End Class
