@@ -54,7 +54,8 @@ Public Class FrmUser
             Dim lv As ListViewItem
             lv = ListView1.Items.Add(rdr(0))
             lv.SubItems.Add(rdr(1))
-            lv.SubItems.Add(rdr(2))
+            Dim passwordMasked As String = New String("*"c, rdr(2).ToString().Length)
+            lv.SubItems.Add(passwordMasked)
             lv.SubItems.Add(rdr(3))
 
         Loop
@@ -100,6 +101,16 @@ Public Class FrmUser
         RadioButton1.Checked = False
         RadioButton2.Checked = False
         RadioButton3.Checked = False
+    End Sub
+
+    Sub HitungJumlahUser()
+        Try
+            cmd = New SqlCommand("SELECT COUNT(*) FROM Tuser", koneksi)
+            Dim jumlahUser As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            Label12.Text = jumlahUser
+        Catch ex As Exception
+            MessageBox.Show("Terjadi kesalahan saat menghitung jumlah user: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
 #End Region
@@ -365,7 +376,7 @@ Public Class FrmUser
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
 
-       
+
         If ListView1.SelectedItems.Count > 0 Then
             ' Ambil item yang dipilih dari ListView
             Dim selectedItem As ListViewItem = ListView1.SelectedItems(0)
@@ -464,6 +475,7 @@ Public Class FrmUser
         Label6.Text = "Hi, " & loggedInUserName & "!"
         UpdateMenuBasedOnRole()
         HitungKaryawanBelumPunyaUser()
+        HitungJumlahUser()
 
         'SetPanelOpacity(Panel7, 220)
         'SetPanelOpacity(Panel8, 220)

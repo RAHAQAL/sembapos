@@ -283,45 +283,56 @@ Public Class FrmKaryawan
                 MessageBox.Show("Data yang akan dihapus tidak boleh kosong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 ModeHapus = False
             Else
+                ' Check if the NIK is used in the Tuser table
+                Dim cmdCheck As New SqlCommand()
+                cmdCheck.Connection = koneksi
+                cmdCheck.CommandText = "SELECT COUNT(*) FROM Tuser WHERE nik = @nik"
+                cmdCheck.Parameters.AddWithValue("@nik", txtNik.Text)
+                Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
 
-                cmd.Connection = koneksi
-                cmd.CommandText = "delete TKaryawan WHERE nik = '" & txtNik.Text & "'"
-                Dim iya As String
-                iya = MsgBox("Apakah anda yakin ingin menghapus?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "WARNING!!")
-                If iya = vbYes Then
-                    cmd.ExecuteNonQuery()
-                    cmd.Dispose()
-                    MessageBox.Show("Data telah dihapus", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+                If count > 0 Then
+                    ' NIK is used in Tuser, show a message and prevent deletion
+                    MessageBox.Show("Karyawan tidak bisa dihapus karena NIK digunakan di Tuser.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
+                    ' NIK is not used in Tuser, proceed with deletion
+                    cmd.Connection = koneksi
+                    cmd.CommandText = "DELETE FROM TKaryawan WHERE nik = @nik"
+                    cmd.Parameters.AddWithValue("@nik", txtNik.Text)
 
+                    Dim iya As DialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus?", "WARNING!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If iya = DialogResult.Yes Then
+                        cmd.ExecuteNonQuery()
+                        cmd.Dispose()
+                        MessageBox.Show("Data telah dihapus", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
 
+                    ' Refresh the ListView
+                    cmd.Connection = koneksi
+                    cmd.CommandText = "SELECT * FROM TKaryawan"
+                    rdr = cmd.ExecuteReader()
+
+                    ListView1.Items.Clear()
+                    Do While rdr.Read()
+                        Dim lv As ListViewItem
+                        lv = ListView1.Items.Add(rdr(0).ToString())
+                        lv.SubItems.Add(rdr(1).ToString())
+                        lv.SubItems.Add(rdr(2).ToString())
+                        lv.SubItems.Add(rdr(3).ToString())
+                        lv.SubItems.Add(rdr(4).ToString())
+                    Loop
+                    cmd.Dispose()
+                    rdr.Close()
                 End If
 
-                cmd.Connection = koneksi
-                cmd.CommandText = "SELECT * FROM TKaryawan"
-                rdr = cmd.ExecuteReader
+                clear()
+                aktif()
+                btnAktif()
+                FrmKaryawan_Load(Nothing, Nothing)
+                txtNik.Focus()
 
-                ListView1.Items.Clear()
-                Do While rdr.Read()
-                    Dim lv As ListViewItem
-                    lv = ListView1.Items.Add(rdr(0))
-                    lv.SubItems.Add(rdr(1))
-                    lv.SubItems.Add(rdr(2))
-                    lv.SubItems.Add(rdr(3))
-                    lv.SubItems.Add(rdr(4))
-                Loop
-                cmd.Dispose()
-                rdr.Close()
+                ListView1.Enabled = True
             End If
 
-            clear()
-            aktif()
-            btnAktif()
-            FrmKaryawan_Load(Nothing, Nothing)
-            txtNik.Focus()
-
-            ListView1.Enabled = True
 
         Else
             MessageBox.Show("Proses tidak bisa dilanjutkan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

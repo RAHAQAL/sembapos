@@ -57,19 +57,23 @@ Partial Class FrmUser
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadioButton2
@@ -517,14 +521,6 @@ Partial Class FrmUser
         Me.RadioButton3.Text = "3"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel5.Location = New System.Drawing.Point(1136, 149)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(194, 172)
-        Me.Panel5.TabIndex = 114
-        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
@@ -536,14 +532,16 @@ Partial Class FrmUser
         Me.Panel4.Size = New System.Drawing.Size(194, 172)
         Me.Panel4.TabIndex = 115
         '
-        'Panel6
+        'Label7
         '
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.Controls.Add(Me.PictureBox2)
-        Me.Panel6.Location = New System.Drawing.Point(911, 347)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(419, 302)
-        Me.Panel6.TabIndex = 116
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(18, 97)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(86, 21)
+        Me.Label7.TabIndex = 5
+        Me.Label7.Text = "Karyawan"
         '
         'Label9
         '
@@ -568,16 +566,14 @@ Partial Class FrmUser
         Me.Label10.Text = "12"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label7
+        'Panel6
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(18, 97)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(86, 21)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Karyawan"
+        Me.Panel6.BackColor = System.Drawing.Color.White
+        Me.Panel6.Controls.Add(Me.PictureBox2)
+        Me.Panel6.Location = New System.Drawing.Point(911, 347)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(419, 302)
+        Me.Panel6.TabIndex = 116
         '
         'PictureBox2
         '
@@ -587,6 +583,51 @@ Partial Class FrmUser
         Me.PictureBox2.Size = New System.Drawing.Size(291, 289)
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.Label8)
+        Me.Panel5.Controls.Add(Me.Label11)
+        Me.Panel5.Controls.Add(Me.Label12)
+        Me.Panel5.Location = New System.Drawing.Point(1136, 149)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(194, 172)
+        Me.Panel5.TabIndex = 114
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(31, 92)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(50, 21)
+        Me.Label8.TabIndex = 8
+        Me.Label8.Text = "Akun"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label11.Location = New System.Drawing.Point(32, 113)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(62, 17)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Terdaftar"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(27, 42)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(64, 50)
+        Me.Label12.TabIndex = 6
+        Me.Label12.Text = "12"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'FrmUser
         '
@@ -620,6 +661,8 @@ Partial Class FrmUser
         Me.Panel4.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -657,7 +700,6 @@ Partial Class FrmUser
     Friend WithEvents btnPenjualan As System.Windows.Forms.Button
     Friend WithEvents btnDashboard As System.Windows.Forms.Button
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
@@ -665,4 +707,8 @@ Partial Class FrmUser
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class

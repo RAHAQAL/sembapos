@@ -273,45 +273,56 @@ Public Class FrmBarang
             If String.IsNullOrWhiteSpace(txtKode.Text) OrElse String.IsNullOrWhiteSpace(txtNama.Text) OrElse String.IsNullOrWhiteSpace(txtHJual.Text) OrElse String.IsNullOrWhiteSpace(txtSatuan.Text) OrElse String.IsNullOrWhiteSpace(txtStok.Text) Then
                 ' Salah satu atau lebih bidang kosong, tampilkan pesan kesalahan
                 MessageBox.Show("Data barang yang akan dihapus tidak boleh kosong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
             Else
+                ' Check if the product is used in any transactions
+                Dim cmdCheck As New SqlCommand()
+                cmdCheck.Connection = koneksi
+                cmdCheck.CommandText = "SELECT COUNT(*) FROM TDetailJual WHERE id_barang = @id_barang"
+                cmdCheck.Parameters.AddWithValue("@id_barang", txtKode.Text)
+                Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
 
-                cmd.Connection = koneksi
-                cmd.CommandText = "delete TBarang WHERE id_barang = '" & txtKode.Text & "'"
-                Dim iya As String
-                iya = MsgBox("Apakah anda yakin ingin menghapus?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "WARNING!!")
-                If iya = vbYes Then
-5:
-                    : cmd.ExecuteNonQuery()
-                    cmd.Dispose()
-                    MessageBox.Show("Data barang telah dihapus", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    ChartTop3()
+                If count > 0 Then
+                    ' Product is used in transactions, show a message and prevent deletion
+                    MessageBox.Show("Data barang tidak bisa dihapus karena terdapat di detail transaksi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
+                    ' Product is not used in transactions, proceed with deletion
+                    cmd.Connection = koneksi
+                    cmd.CommandText = "DELETE FROM TBarang WHERE id_barang = @id_barang"
+                    cmd.Parameters.AddWithValue("@id_barang", txtKode.Text)
 
+                    Dim iya As DialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus?", "WARNING!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If iya = DialogResult.Yes Then
+                        cmd.ExecuteNonQuery()
+                        cmd.Dispose()
+                        MessageBox.Show("Data barang telah dihapus", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        ChartTop3()
+                    End If
 
+                    ' Refresh the ListView
+                    cmd.Connection = koneksi
+                    cmd.CommandText = "SELECT * FROM TBarang"
+                    rdr = cmd.ExecuteReader()
+
+                    ListView1.Items.Clear()
+                    Do While rdr.Read()
+                        Dim lv As ListViewItem
+                        lv = ListView1.Items.Add(rdr(0).ToString())
+                        lv.SubItems.Add(rdr(1).ToString())
+                        lv.SubItems.Add(rdr(2).ToString())
+                        lv.SubItems.Add(rdr(3).ToString())
+                        lv.SubItems.Add(rdr(4).ToString())
+                    Loop
+                    cmd.Dispose()
+                    rdr.Close()
                 End If
 
-                cmd.Connection = koneksi
-                cmd.CommandText = "SELECT * FROM TBarang"
-                rdr = cmd.ExecuteReader
-
-                ListView1.Items.Clear()
-                Do While rdr.Read()
-                    Dim lv As ListViewItem
-                    lv = ListView1.Items.Add(rdr(0))
-                    lv.SubItems.Add(rdr(1))
-                    lv.SubItems.Add(rdr(2))
-                    lv.SubItems.Add(rdr(3))
-                    lv.SubItems.Add(rdr(4))
-                Loop
-                cmd.Dispose()
-                rdr.Close()
+                btnAktif()
+                aktif()
+                txtKode.Focus()
+                clear()
+                ListView1.Enabled = True
             End If
-            btnAktif()
-            aktif()
-            txtKode.Focus()
-            clear()
-            ListView1.Enabled = True
+
 
 
 
