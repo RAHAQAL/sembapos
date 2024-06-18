@@ -67,6 +67,7 @@ Partial Class Dashboard
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.cmbLaporan = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +98,7 @@ Partial Class Dashboard
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.cmbLaporan)
         Me.Panel2.Controls.Add(Me.btnLaporan)
         Me.Panel2.Controls.Add(Me.btnLogout)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -451,7 +453,7 @@ Partial Class Dashboard
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(1089, 84)
+        Me.TextBox1.Location = New System.Drawing.Point(1089, 64)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(231, 31)
@@ -466,7 +468,7 @@ Partial Class Dashboard
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(1092, 92)
+        Me.Label6.Location = New System.Drawing.Point(1092, 72)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 15)
@@ -478,7 +480,7 @@ Partial Class Dashboard
         Me.Button7.FlatAppearance.BorderSize = 0
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(1018, 87)
+        Me.Button7.Location = New System.Drawing.Point(1018, 67)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(22, 23)
         Me.Button7.TabIndex = 21
@@ -487,7 +489,7 @@ Partial Class Dashboard
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1041, 82)
+        Me.PictureBox2.Location = New System.Drawing.Point(1041, 62)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(42, 37)
         Me.PictureBox2.TabIndex = 22
@@ -583,6 +585,17 @@ Partial Class Dashboard
         Me.PictureBox5.TabIndex = 0
         Me.PictureBox5.TabStop = False
         '
+        'cmbLaporan
+        '
+        Me.cmbLaporan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.cmbLaporan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.cmbLaporan.FormattingEnabled = True
+        Me.cmbLaporan.Location = New System.Drawing.Point(45, 515)
+        Me.cmbLaporan.Name = "cmbLaporan"
+        Me.cmbLaporan.Size = New System.Drawing.Size(123, 28)
+        Me.cmbLaporan.TabIndex = 8
+        Me.cmbLaporan.Text = "Laporan"
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -671,4 +684,5 @@ Partial Class Dashboard
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents ChartJB As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents Top3 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents cmbLaporan As System.Windows.Forms.ComboBox
 End Class

@@ -23,10 +23,10 @@ Partial Class FrmBarang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBarang))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title4 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -74,6 +74,10 @@ Partial Class FrmBarang
         Me.Top3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -81,6 +85,7 @@ Partial Class FrmBarang
         CType(Me.nudQty, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.Top3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListView1
@@ -621,34 +626,34 @@ Partial Class FrmBarang
         '
         'Top3
         '
-        ChartArea1.AxisX.MajorGrid.Enabled = False
-        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.AxisY.MajorGrid.Enabled = False
-        ChartArea1.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.Name = "ChartArea1"
-        Me.Top3.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Top3.Legends.Add(Legend1)
+        ChartArea4.AxisX.MajorGrid.Enabled = False
+        ChartArea4.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea4.AxisY.MajorGrid.Enabled = False
+        ChartArea4.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea4.Name = "ChartArea1"
+        Me.Top3.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Top3.Legends.Add(Legend4)
         Me.Top3.Location = New System.Drawing.Point(3, 15)
         Me.Top3.Name = "Top3"
         Me.Top3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.Top3.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
-        Series1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.IsValueShownAsLabel = True
-        Series1.LabelForeColor = System.Drawing.Color.White
-        Series1.Legend = "Legend1"
-        Series1.Name = "Produk"
-        Series1.YValuesPerPoint = 4
-        Me.Top3.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
+        Series4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series4.IsValueShownAsLabel = True
+        Series4.LabelForeColor = System.Drawing.Color.White
+        Series4.Legend = "Legend1"
+        Series4.Name = "Produk"
+        Series4.YValuesPerPoint = 4
+        Me.Top3.Series.Add(Series4)
         Me.Top3.Size = New System.Drawing.Size(364, 258)
         Me.Top3.TabIndex = 1
         Me.Top3.Text = "Produk Terlaris"
-        Title1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title1.Name = "ProdukTerlaris"
-        Title1.Text = "Produk Terlaris"
-        Me.Top3.Titles.Add(Title1)
+        Title4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title4.Name = "ProdukTerlaris"
+        Title4.Text = "Produk Terlaris"
+        Me.Top3.Titles.Add(Title4)
         '
         'PrintDocument1
         '
@@ -663,12 +668,61 @@ Partial Class FrmBarang
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(1057, 62)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(42, 37)
+        Me.PictureBox2.TabIndex = 48
+        Me.PictureBox2.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.Location = New System.Drawing.Point(1034, 67)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(22, 23)
+        Me.Button7.TabIndex = 47
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.White
+        Me.Label11.Enabled = False
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label11.Image = CType(resources.GetObject("Label11.Image"), System.Drawing.Image)
+        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label11.Location = New System.Drawing.Point(1108, 72)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(63, 15)
+        Me.Label11.TabIndex = 46
+        Me.Label11.Text = "       Search"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(1105, 64)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(231, 31)
+        Me.TextBox1.TabIndex = 45
+        '
         'FrmBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -695,6 +749,7 @@ Partial Class FrmBarang
         CType(Me.nudQty, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         CType(Me.Top3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -746,4 +801,8 @@ Partial Class FrmBarang
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

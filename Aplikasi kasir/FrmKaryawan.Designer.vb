@@ -68,6 +68,10 @@ Partial Class FrmKaryawan
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -75,6 +79,7 @@ Partial Class FrmKaryawan
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnSimpan
@@ -629,12 +634,61 @@ Partial Class FrmKaryawan
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(1052, 62)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(42, 37)
+        Me.PictureBox3.TabIndex = 42
+        Me.PictureBox3.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.Location = New System.Drawing.Point(1029, 67)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(22, 23)
+        Me.Button7.TabIndex = 41
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.Enabled = False
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label6.Location = New System.Drawing.Point(1103, 72)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 15)
+        Me.Label6.TabIndex = 40
+        Me.Label6.Text = "       Search"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(1100, 64)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(231, 31)
+        Me.TextBox1.TabIndex = 39
+        '
         'FrmKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel3)
@@ -661,6 +715,7 @@ Partial Class FrmKaryawan
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -710,4 +765,8 @@ Partial Class FrmKaryawan
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents btnPrint As System.Windows.Forms.Button
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

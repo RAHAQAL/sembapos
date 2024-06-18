@@ -67,6 +67,10 @@ Partial Class FrmUser
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -74,6 +78,7 @@ Partial Class FrmUser
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadioButton2
@@ -629,12 +634,61 @@ Partial Class FrmUser
         Me.Label12.Text = "12"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(1051, 62)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(42, 37)
+        Me.PictureBox3.TabIndex = 120
+        Me.PictureBox3.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.Location = New System.Drawing.Point(1028, 67)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(22, 23)
+        Me.Button7.TabIndex = 119
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.White
+        Me.Label14.Enabled = False
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label14.Image = CType(resources.GetObject("Label14.Image"), System.Drawing.Image)
+        Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label14.Location = New System.Drawing.Point(1102, 72)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(63, 15)
+        Me.Label14.TabIndex = 118
+        Me.Label14.Text = "       Search"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(1099, 64)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(231, 31)
+        Me.TextBox1.TabIndex = 117
+        '
         'FrmUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel5)
@@ -663,6 +717,7 @@ Partial Class FrmUser
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -711,4 +766,8 @@ Partial Class FrmUser
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
