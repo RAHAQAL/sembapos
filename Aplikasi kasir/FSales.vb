@@ -459,4 +459,8 @@ Public Class FSales
     Private Sub btnPenjualan_Click(sender As Object, e As EventArgs) Handles btnPenjualan.Click
 
     End Sub
+
+    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+
+    End Sub
 End Class

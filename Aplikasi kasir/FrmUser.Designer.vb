@@ -337,7 +337,7 @@ Partial Class FrmUser
         Me.Panel2.Location = New System.Drawing.Point(0, 46)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(223, 703)
+        Me.Panel2.Size = New System.Drawing.Size(223, 699)
         Me.Panel2.TabIndex = 109
         '
         'btnLaporan
@@ -485,7 +485,7 @@ Partial Class FrmUser
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1370, 46)
+        Me.Panel1.Size = New System.Drawing.Size(1366, 46)
         Me.Panel1.TabIndex = 108
         '
         'Panel3
@@ -698,10 +698,9 @@ Partial Class FrmUser
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximizeBox = False
         Me.Name = "FrmUser"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SembaPOS"

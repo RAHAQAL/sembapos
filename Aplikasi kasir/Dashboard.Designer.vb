@@ -23,14 +23,14 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title3 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title4 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnLaporan = New System.Windows.Forms.Button()
@@ -67,7 +67,6 @@ Partial Class Dashboard
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.cmbLaporan = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,7 +97,6 @@ Partial Class Dashboard
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.cmbLaporan)
         Me.Panel2.Controls.Add(Me.btnLaporan)
         Me.Panel2.Controls.Add(Me.btnLogout)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -345,35 +343,35 @@ Partial Class Dashboard
         'ChartJB
         '
         Me.ChartJB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        ChartArea1.AxisX.MajorGrid.Enabled = False
-        ChartArea1.AxisX.Title = "Bulan"
-        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.AxisY.MajorGrid.Enabled = False
-        ChartArea1.AxisY.Title = "Total Penjualan"
-        ChartArea1.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartJB.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartJB.Legends.Add(Legend1)
+        ChartArea3.AxisX.MajorGrid.Enabled = False
+        ChartArea3.AxisX.Title = "Bulan"
+        ChartArea3.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea3.AxisY.MajorGrid.Enabled = False
+        ChartArea3.AxisY.Title = "Total Penjualan"
+        ChartArea3.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea3.Name = "ChartArea1"
+        Me.ChartJB.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.ChartJB.Legends.Add(Legend3)
         Me.ChartJB.Location = New System.Drawing.Point(0, 15)
         Me.ChartJB.Name = "ChartJB"
         Me.ChartJB.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.ChartJB.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.IsValueShownAsLabel = True
-        Series1.Legend = "Legend1"
-        Series1.Name = "Penjualan"
-        Me.ChartJB.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series3.IsValueShownAsLabel = True
+        Series3.Legend = "Legend1"
+        Series3.Name = "Penjualan"
+        Me.ChartJB.Series.Add(Series3)
         Me.ChartJB.Size = New System.Drawing.Size(699, 314)
         Me.ChartJB.TabIndex = 0
         Me.ChartJB.Text = "Penjualan"
-        Title1.BackColor = System.Drawing.Color.White
-        Title1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title1.Name = "JumlahPenjualan"
-        Title1.Text = "Grafik Penjualan"
-        Me.ChartJB.Titles.Add(Title1)
+        Title3.BackColor = System.Drawing.Color.White
+        Title3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title3.Name = "JumlahPenjualan"
+        Title3.Text = "Grafik Penjualan"
+        Me.ChartJB.Titles.Add(Title3)
         '
         'Panel8
         '
@@ -388,34 +386,34 @@ Partial Class Dashboard
         '
         'Top3
         '
-        ChartArea2.AxisX.MajorGrid.Enabled = False
-        ChartArea2.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea2.AxisY.MajorGrid.Enabled = False
-        ChartArea2.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea2.Name = "ChartArea1"
-        Me.Top3.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Top3.Legends.Add(Legend2)
+        ChartArea4.AxisX.MajorGrid.Enabled = False
+        ChartArea4.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea4.AxisY.MajorGrid.Enabled = False
+        ChartArea4.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea4.Name = "ChartArea1"
+        Me.Top3.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Top3.Legends.Add(Legend4)
         Me.Top3.Location = New System.Drawing.Point(0, 15)
         Me.Top3.Name = "Top3"
         Me.Top3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.Top3.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
-        Series2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series2.IsValueShownAsLabel = True
-        Series2.LabelForeColor = System.Drawing.Color.White
-        Series2.Legend = "Legend1"
-        Series2.Name = "Produk"
-        Series2.YValuesPerPoint = 4
-        Me.Top3.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
+        Series4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series4.IsValueShownAsLabel = True
+        Series4.LabelForeColor = System.Drawing.Color.White
+        Series4.Legend = "Legend1"
+        Series4.Name = "Produk"
+        Series4.YValuesPerPoint = 4
+        Me.Top3.Series.Add(Series4)
         Me.Top3.Size = New System.Drawing.Size(313, 314)
         Me.Top3.TabIndex = 0
         Me.Top3.Text = "Produk Terlaris"
-        Title2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title2.Name = "ProdukTerlaris"
-        Title2.Text = "Produk Terlaris"
-        Me.Top3.Titles.Add(Title2)
+        Title4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title4.Name = "ProdukTerlaris"
+        Title4.Text = "Produk Terlaris"
+        Me.Top3.Titles.Add(Title4)
         '
         'Label1
         '
@@ -585,17 +583,6 @@ Partial Class Dashboard
         Me.PictureBox5.TabIndex = 0
         Me.PictureBox5.TabStop = False
         '
-        'cmbLaporan
-        '
-        Me.cmbLaporan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cmbLaporan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.cmbLaporan.FormattingEnabled = True
-        Me.cmbLaporan.Location = New System.Drawing.Point(45, 515)
-        Me.cmbLaporan.Name = "cmbLaporan"
-        Me.cmbLaporan.Size = New System.Drawing.Size(123, 28)
-        Me.cmbLaporan.TabIndex = 8
-        Me.cmbLaporan.Text = "Laporan"
-        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -620,7 +607,6 @@ Partial Class Dashboard
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximizeBox = False
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SembaPOS"
@@ -684,5 +670,4 @@ Partial Class Dashboard
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents ChartJB As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents Top3 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents cmbLaporan As System.Windows.Forms.ComboBox
 End Class

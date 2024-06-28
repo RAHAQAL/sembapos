@@ -23,10 +23,10 @@ Partial Class FrmBarang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBarang))
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title4 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -328,7 +328,7 @@ Partial Class FrmBarang
         Me.Panel7.Location = New System.Drawing.Point(0, 46)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(223, 703)
+        Me.Panel7.Size = New System.Drawing.Size(223, 699)
         Me.Panel7.TabIndex = 40
         '
         'btnLaporan
@@ -486,7 +486,7 @@ Partial Class FrmBarang
         Me.Panel8.Location = New System.Drawing.Point(0, 0)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1370, 46)
+        Me.Panel8.Size = New System.Drawing.Size(1366, 46)
         Me.Panel8.TabIndex = 39
         '
         'Panel1
@@ -626,34 +626,34 @@ Partial Class FrmBarang
         '
         'Top3
         '
-        ChartArea4.AxisX.MajorGrid.Enabled = False
-        ChartArea4.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea4.AxisY.MajorGrid.Enabled = False
-        ChartArea4.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea4.Name = "ChartArea1"
-        Me.Top3.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Top3.Legends.Add(Legend4)
+        ChartArea1.AxisX.MajorGrid.Enabled = False
+        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisY.MajorGrid.Enabled = False
+        ChartArea1.AxisY.TitleFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.Name = "ChartArea1"
+        Me.Top3.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Top3.Legends.Add(Legend1)
         Me.Top3.Location = New System.Drawing.Point(3, 15)
         Me.Top3.Name = "Top3"
         Me.Top3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.Top3.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(175, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))}
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
-        Series4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series4.IsValueShownAsLabel = True
-        Series4.LabelForeColor = System.Drawing.Color.White
-        Series4.Legend = "Legend1"
-        Series4.Name = "Produk"
-        Series4.YValuesPerPoint = 4
-        Me.Top3.Series.Add(Series4)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
+        Series1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsValueShownAsLabel = True
+        Series1.LabelForeColor = System.Drawing.Color.White
+        Series1.Legend = "Legend1"
+        Series1.Name = "Produk"
+        Series1.YValuesPerPoint = 4
+        Me.Top3.Series.Add(Series1)
         Me.Top3.Size = New System.Drawing.Size(364, 258)
         Me.Top3.TabIndex = 1
         Me.Top3.Text = "Produk Terlaris"
-        Title4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title4.Name = "ProdukTerlaris"
-        Title4.Text = "Produk Terlaris"
-        Me.Top3.Titles.Add(Title4)
+        Title1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title1.Name = "ProdukTerlaris"
+        Title1.Text = "Produk Terlaris"
+        Me.Top3.Titles.Add(Title1)
         '
         'PrintDocument1
         '
@@ -731,10 +731,9 @@ Partial Class FrmBarang
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label7)
         Me.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximizeBox = False
         Me.Name = "FrmBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SembaPOS"
